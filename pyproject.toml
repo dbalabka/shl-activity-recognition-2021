@@ -4,6 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Dmitry Balabka <dmitry.balabka@gmail.com>"]
 license = "MIT"
+packages = [
+    { include = "shl" }
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.7.1,<3.9"
