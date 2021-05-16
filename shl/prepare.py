@@ -21,3 +21,7 @@ def parse_csv(path, columns, numeric_columns, sep=';', chunk_size=5, head_size=4
     # convert numeric columns
     df[numeric_columns] = df[numeric_columns].apply(pd.to_numeric)
     return df
+
+
+def normalize_epoch_time(df: pd.DataFrame, column: str):
+    return df.assign(epoch_time_id=lambda x: x[column].round(-3))
