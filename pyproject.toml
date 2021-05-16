@@ -20,6 +20,7 @@ pip = "^21"
 lightgbm = "^3.2.1"
 xgboost = "^1.4.2"
 pyarrow = "^4.0.0"
+featuretools = "^0.24.0"
 
 [tool.poetry.dev-dependencies]
 
