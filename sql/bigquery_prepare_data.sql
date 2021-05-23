@@ -6,6 +6,9 @@ with cells as (
         cells.*,
 
         if(cells.cell_type is not null, 1, 0) as cell_available,
+        if(cells.cell_type = 'LTE', 1, 0) as lte_available,
+        if(cells.cell_type = 'GSM', 1, 0) as gsm_available,
+        if(cells.cell_type = 'WCDMA', 1, 0) as wcdma_available,
 
         PERCENTILE_DISC(cells.isRegistered, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_isRegistered_median,
         PERCENTILE_DISC(cells.MCC, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_MCC_median,
@@ -32,6 +35,12 @@ cell_agg as (
         -- Cells aggregated
         SUM(cell_available) as cell_count,
         max(cell_available) as cell_available_max,
+        max(gsm_available) as gsm_available_max,
+        SUM(gsm_available) as gsm_count,
+        max(lte_available) as lte_available_max,
+        SUM(lte_available) as lte_count,
+        max(wcdma_available) as wcdma_available_max,
+        SUM(wcdma_available) as wcdma_count,
 
         min(isRegistered) as cell_isRegistered_min,
         max(isRegistered) as cell_isRegistered_max,
