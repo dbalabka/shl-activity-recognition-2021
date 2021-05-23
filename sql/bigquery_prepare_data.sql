@@ -214,7 +214,7 @@ aggregated_with_features as (
         aggragated_data.*,
 
         wifi_names.* EXCEPT (data_type, epoch_time_id),
-        features_location.* EXCEPT (data_type, epoch_time_id)
+        features_location.* EXCEPT (data_type, epoch_time)
 
     FROM aggragated_data
 
