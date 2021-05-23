@@ -21,6 +21,9 @@ lightgbm = "^3.2.1"
 xgboost = "^1.4.2"
 pyarrow = "^4.0.0"
 featuretools = "^0.24.0"
+plotly = "^4.14.3"
+ipywidgets = "^7.6.3"
+gensim = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
 

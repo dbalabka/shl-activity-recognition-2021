@@ -25,3 +25,6 @@ def parse_csv(path, columns, numeric_columns, sep=';', chunk_size=5, head_size=4
 
 def normalize_epoch_time(df: pd.DataFrame, column: str):
     return df.assign(epoch_time_id=lambda x: x[column].round(-3))
+
+def normalize_lat_long(df: pd.DataFrame, lat_column: str = 'Latitude', long_column: str = 'Longitude'):
+    return df.assign(latlong=lambda x: x[[lat_column, long_column]].apply(tuple, axis=1))
