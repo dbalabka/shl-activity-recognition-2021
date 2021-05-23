@@ -68,47 +68,7 @@ raw_data as (
             wifi.Frequency__MHz_ as wifi_Frequency,
             wifi.Capabilities as wifi_Capabilities,
             PERCENTILE_DISC(wifi.Frequency__MHz_, 0.5) OVER (PARTITION BY label.epoch_time) as wifi_Frequency_median,
-            PERCENTILE_DISC(wifi.RSSI, 0.5) OVER(PARTITION BY label.epoch_time) as wifi_RSSI_median,
-
-            -- Location features
-            features_location.accuracy_change,
-            features_location.Latitude_change,
-            features_location.Longitude_change,
-            features_location.Altitude_change,
-            features_location.distance,
-            features_location.speed,
-            features_location.vertical_speed,
-            features_location.direction,
-            features_location.vertical_direction,
-            features_location.speed_change,
-            features_location.vertical_speed_change,
-            features_location.direction_change,
-            features_location.vertical_direction_change,
-            features_location.abs_speed_change,
-            features_location.abs_vertical_speed_change,
-            features_location.abs_direction_change,
-            features_location.abs_vertical_direction_change,
-            features_location.accuracy_3_s_window_avg,
-            features_location.Latitude_3_s_window_avg,
-            features_location.Longitude_3_s_window_avg,
-            features_location.Altitude_3_s_window_avg,
-            features_location.accuracy_change_3_s_window_avg,
-            features_location.Latitude_change_3_s_window_avg,
-            features_location.Longitude_change_3_s_window_avg,
-            features_location.Altitude_change_3_s_window_avg,
-            features_location.distance_3_s_window_avg,
-            features_location.speed_3_s_window_avg,
-            features_location.vertical_speed_3_s_window_avg,
-            features_location.direction_3_s_window_avg,
-            features_location.vertical_direction_3_s_window_avg,
-            features_location.speed_change_3_s_window_avg,
-            features_location.vertical_speed_change_3_s_window_avg,
-            features_location.direction_change_3_s_window_avg,
-            features_location.vertical_direction_change_3_s_window_avg,
-            features_location.abs_speed_change_3_s_window_avg,
-            features_location.abs_vertical_speed_change_3_s_window_avg,
-            features_location.abs_direction_change_3_s_window_avg,
-            features_location.abs_vertical_direction_change_3_s_window_avg
+            PERCENTILE_DISC(wifi.RSSI, 0.5) OVER(PARTITION BY label.epoch_time) as wifi_RSSI_median
 
     FROM (
         select *, 'TRAIN' as data_type from `shl-2021.train.label_train`
@@ -144,16 +104,6 @@ raw_data as (
         union all
         select *, 'TEST' as data_type from `shl-2021.validate.wifi`
     ) wifi on cast(round(wifi.Epoch_time__ms_, -3) as int64) = label.epoch_time and wifi.data_type = label.data_type
-
-    left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
-        union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.features_denys`
-        union all
-        select *, 'TEST' as data_type from `shl-2021.validate.features_denys`
-    ) features_location on features_location.epoch_time = label.epoch_time and features_location.data_type = label.data_type
-
-
 
 --where label.epoch_time = 1493282527000
 ),
@@ -253,46 +203,6 @@ aggragated_data as (
         max(wifi_RSSI) as wifi_RSSI_max,
         avg(wifi_RSSI_median) as wifi_RSSI_median,
 
-        -- Location features aggregated
-        avg(accuracy_change) as accuracy_change,
-        avg(Latitude_change) as Latitude_change,
-        avg(Longitude_change) as Longitude_change,
-        avg(Altitude_change) as Altitude_change,
-        avg(distance) as distance,
-        avg(speed) as speed,
-        avg(vertical_speed) as vertical_speed,
-        avg(direction) as direction,
-        avg(vertical_direction) as vertical_direction,
-        avg(speed_change) as speed_change,
-        avg(vertical_speed_change) as vertical_speed_change,
-        avg(direction_change) as direction_change,
-        avg(vertical_direction_change) as vertical_direction_change,
-        avg(abs_speed_change) as abs_speed_change,
-        avg(abs_vertical_speed_change) as abs_vertical_speed_change,
-        avg(abs_direction_change) as abs_direction_change,
-        avg(abs_vertical_direction_change) as abs_vertical_direction_change,
-        avg(accuracy_3_s_window_avg) as accuracy_3_s_window_avg,
-        avg(Latitude_3_s_window_avg) as Latitude_3_s_window_avg,
-        avg(Longitude_3_s_window_avg) as Longitude_3_s_window_avg,
-        avg(Altitude_3_s_window_avg) as Altitude_3_s_window_avg,
-        avg(accuracy_change_3_s_window_avg) as accuracy_change_3_s_window_avg,
-        avg(Latitude_change_3_s_window_avg) as Latitude_change_3_s_window_avg,
-        avg(Longitude_change_3_s_window_avg) as Longitude_change_3_s_window_avg,
-        avg(Altitude_change_3_s_window_avg) as Altitude_change_3_s_window_avg,
-        avg(distance_3_s_window_avg) as distance_3_s_window_avg,
-        avg(speed_3_s_window_avg) as speed_3_s_window_avg,
-        avg(vertical_speed_3_s_window_avg) as vertical_speed_3_s_window_avg,
-        avg(direction_3_s_window_avg) as direction_3_s_window_avg,
-        avg(vertical_direction_3_s_window_avg) as vertical_direction_3_s_window_avg,
-        avg(speed_change_3_s_window_avg) as speed_change_3_s_window_avg,
-        avg(vertical_speed_change_3_s_window_avg) as vertical_speed_change_3_s_window_avg,
-        avg(direction_change_3_s_window_avg) as direction_change_3_s_window_avg,
-        avg(vertical_direction_change_3_s_window_avg) as vertical_direction_change_3_s_window_avg,
-        avg(abs_speed_change_3_s_window_avg) as abs_speed_change_3_s_window_avg,
-        avg(abs_vertical_speed_change_3_s_window_avg) as abs_vertical_speed_change_3_s_window_avg,
-        avg(abs_direction_change_3_s_window_avg) as abs_direction_change_3_s_window_avg,
-        avg(abs_vertical_direction_change_3_s_window_avg) as abs_vertical_direction_change_3_s_window_avg,
-
     from raw_data
     group by data_type,
              epoch_time,
@@ -303,10 +213,11 @@ aggregated_with_features as (
 
         aggragated_data.*,
 
-        -- WiFi names aggregated
-        wifi_names.* EXCEPT (data_type, epoch_time_id)
+        wifi_names.* EXCEPT (data_type, epoch_time_id),
+        features_location.* EXCEPT (data_type, epoch_time_id)
 
     FROM aggragated_data
+
     left join (
         select *, 'TRAIN' as data_type from `shl-2021.train.features_wifi_names`
         union all
@@ -314,6 +225,14 @@ aggregated_with_features as (
         union all
         select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_names`
     ) wifi_names on wifi_names.epoch_time_id = aggragated_data.epoch_time and wifi_names.data_type = aggragated_data.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_denys`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_denys`
+    ) features_location on features_location.epoch_time = aggragated_data.epoch_time and features_location.data_type = aggragated_data.data_type
 )
 
 select * EXCEPT (epoch_time) FROM aggregated_with_features
