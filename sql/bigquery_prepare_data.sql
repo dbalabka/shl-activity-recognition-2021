@@ -228,4 +228,4 @@ aggregated_with_features as (
     --where label.epoch_time = 1493282527000
 )
 
-select * EXCEPT (epoch_time) FROM aggregated_with_features
+select * FROM aggregated_with_features
