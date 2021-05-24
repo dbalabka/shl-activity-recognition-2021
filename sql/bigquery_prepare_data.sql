@@ -1,74 +1,209 @@
 -- Raw data
-with cell_data as (
-    select data_type,
-           cell.cell_type,
-           cast(round(cell.epoch_time, -3) as int64) as epoch_time,
-           if(cell.cell_type is not null, 1, 0) as cell_available,
-           ifnull(cell.isRegistered, 0) as cell_isRegistered,
-           cell.MCC as cell_MCC,
-           cell.MNC as cell_MNC,
-           cell.ci as cell_ci_cid,
-           cell.TAC as cell_TAC_LAC,
-           cell.PCI as cell_PCI_PSC,
-           ifnull(cell.asuLevel, 0) as cell_asuLevel,
-           ifnull(cell.dBm, -1000) as cell_dBm,
-           ifnull(cell.level, 0) as cell_level,
+with cells as (
+    SELECT
+        cast(round(epoch_time, -3) as int64) as epoch_time_id,
 
+        cells.*,
+
+        if(cells.cell_type is not null, 1, 0) as cell_available,
+        if(cells.cell_type = 'LTE', 1, 0) as lte_available,
+        if(cells.cell_type = 'GSM', 1, 0) as gsm_available,
+        if(cells.cell_type = 'WCDMA', 1, 0) as wcdma_available,
+
+        PERCENTILE_DISC(cells.isRegistered, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_isRegistered_median,
+        PERCENTILE_DISC(cells.MCC, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_MCC_median,
+        PERCENTILE_DISC(cells.MNC, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_MNC_median,
+        PERCENTILE_DISC(cells.ci, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_ci_cid_median,
+        PERCENTILE_DISC(cells.TAC, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_TAC_LAC_median,
+        PERCENTILE_DISC(cells.PCI, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_PCI_PSC_median,
+        PERCENTILE_DISC(cells.dBm, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_dBm_median,
+        PERCENTILE_DISC(cells.asuLevel, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_asuLevel_median,
+        PERCENTILE_DISC(cells.level, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as cell_level_median,
     from (
         select *, 'TRAIN' as data_type from `shl-2021.train.cells`
         union all
         select *, 'TEST' as data_type from `shl-2021.train.cells`
         union all
         select *, 'VALIDATE' as data_type from `shl-2021.validate.cells`
-    ) cell
+    ) cells
 ),
-raw_data as (
+cell_agg as (
+    SELECT
+        cells.data_type,
+        epoch_time_id,
 
-    SELECT  label.data_type,
-            label.epoch_time,
-            label.label,
+        -- Cells aggregated
+        SUM(cell_available) as cell_count,
+        max(cell_available) as cell_available_max,
+        max(gsm_available) as gsm_available_max,
+        SUM(gsm_available) as gsm_count,
+        max(lte_available) as lte_available_max,
+        SUM(lte_available) as lte_count,
+        max(wcdma_available) as wcdma_available_max,
+        SUM(wcdma_available) as wcdma_count,
 
-            -- Cells
-            cells.* EXCEPT (data_type, epoch_time),
-            PERCENTILE_DISC(cells.cell_available, 0.5) OVER(PARTITION BY label.epoch_time) as cell_available_median,
-            PERCENTILE_DISC(cells.cell_isRegistered, 0.5) OVER(PARTITION BY label.epoch_time) as cell_isRegistered_median,
-            PERCENTILE_DISC(cells.cell_MCC, 0.5) OVER(PARTITION BY label.epoch_time) as cell_MCC_median,
-            PERCENTILE_DISC(cells.cell_MNC, 0.5) OVER(PARTITION BY label.epoch_time) as cell_MNC_median,
-            PERCENTILE_DISC(cells.cell_ci_cid, 0.5) OVER(PARTITION BY label.epoch_time) as cell_ci_cid_median,
-            PERCENTILE_DISC(cells.cell_TAC_LAC, 0.5) OVER(PARTITION BY label.epoch_time) as cell_TAC_LAC_median,
-            PERCENTILE_DISC(cells.cell_PCI_PSC, 0.5) OVER(PARTITION BY label.epoch_time) as cell_PCI_PSC_median,
-            PERCENTILE_DISC(cells.cell_dBm, 0.5) OVER(PARTITION BY label.epoch_time) as cell_dBm_median,
-            PERCENTILE_DISC(cells.cell_asuLevel, 0.5) OVER(PARTITION BY label.epoch_time) as cell_asuLevel_median,
-            PERCENTILE_DISC(cells.cell_level, 0.5) OVER(PARTITION BY label.epoch_time) as cell_level_median,
+        min(isRegistered) as cell_isRegistered_min,
+        max(isRegistered) as cell_isRegistered_max,
+        min(MCC) as cell_MCC_min,
+        max(MCC) as cell_MCC_max,
+        min(MNC) as cell_MNC_min,
+        max(MNC) as cell_MNC_max,
+        min(ci) as cell_ci_cid_min,
+        max(ci) as cell_ci_cid_max,
+        min(TAC) as cell_TAC_LAC_min,
+        max(TAC) as cell_TAC_LAC_max,
+        min(PCI) as cell_PCI_PSC_min,
+        max(PCI) as cell_PCI_PSC_max,
+        min(asuLevel) as cell_asuLevel_min,
+        max(asuLevel) as cell_asuLevel_max,
+        avg(asuLevel) as cell_asuLevel_avg,
+        min(dBm) as cell_dBm_min,
+        max(dBm) as cell_dBm_max,
+        avg(dBm) as cell_dBm_avg,
+        min(level) as cell_level_min,
+        max(level) as cell_level_max,
+        avg(level) as cell_level_avg,
 
-            -- Location
-            location.Latitude as location_Latitude,
-            location.Longitude as location_Longitude,
-            location.Altitude as location_Altitude,
-            location.accuracy as location_accuracy,
-            PERCENTILE_CONT(location.Latitude, 0.5) OVER(PARTITION BY label.epoch_time) as location_Latitude_median,
-            PERCENTILE_CONT(location.Longitude, 0.5) OVER(PARTITION BY label.epoch_time) as location_Longitude_median,
-            PERCENTILE_CONT(location.Altitude, 0.5) OVER(PARTITION BY label.epoch_time) as location_Altitude_median,
-            PERCENTILE_CONT(location.accuracy, 0.5) OVER(PARTITION BY label.epoch_time) as location_accuracy_median,
+        avg(cell_ci_cid_median) as cell_ci_cid_median,
+        avg(cell_MCC_median) as cell_MCC_median,
+        avg(cell_MNC_median) as cell_MNC_median,
+        avg(cell_PCI_PSC_median) as cell_PCI_PSC_median,
+        avg(cell_TAC_LAC_median) as cell_TAC_LAC_median,
 
-            -- GPS
-            gps.ID as gps_ID,
-            gps.Azimuth__degrees_ as gps_Azimuth,
-            gps.Elevation__degrees_ as gps_Elevation,
-            gps.SNR as gps_SNR,
-            PERCENTILE_DISC(gps.ID, 0.5) OVER(PARTITION BY label.epoch_time) as gps_ID_median,
-            PERCENTILE_DISC(gps.Azimuth__degrees_, 0.5) OVER(PARTITION BY label.epoch_time) as gps_Azimuth_median,
-            PERCENTILE_DISC(gps.Elevation__degrees_, 0.5) OVER(PARTITION BY label.epoch_time) as gps_Elevation_median,
-            PERCENTILE_DISC(gps.SNR, 0.5) OVER(PARTITION BY label.epoch_time) as gps_SNR_median,
+        avg(cell_isRegistered_median) as cell_isRegistered_median,
+        avg(cell_dBm_median) as cell_dBm_median,
+        avg(cell_asuLevel_median) as cell_asuLevel_median,
+        avg(cell_level_median) as cell_level_median,
+    FROM cells
+    GROUP BY data_type, epoch_time_id
+),
+location as (
+    SELECT
+        cast(round(epoch_time, -3) as int64) as epoch_time_id,
 
-            -- WiFi
-            -- wifi.BSSID as wifi_BSSID,
-            wifi.RSSI as wifi_RSSI,
-            -- wifi.SSID as wifi_SSID,
-            wifi.Frequency__MHz_ as wifi_Frequency,
-            wifi.Capabilities as wifi_Capabilities,
-            PERCENTILE_DISC(wifi.Frequency__MHz_, 0.5) OVER (PARTITION BY label.epoch_time) as wifi_Frequency_median,
-            PERCENTILE_DISC(wifi.RSSI, 0.5) OVER(PARTITION BY label.epoch_time) as wifi_RSSI_median
+        location.*,
+
+        PERCENTILE_CONT(Latitude, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_Latitude_median,
+        PERCENTILE_CONT(Longitude, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_Longitude_median,
+        PERCENTILE_CONT(Altitude, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_Altitude_median,
+        PERCENTILE_CONT(accuracy, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_accuracy_median
+    FROM (
+        select *, 'TRAIN' as data_type from `shl-2021.train.location`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.location`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.location`
+    ) location
+),
+location_agg as (
+    SELECT
+        data_type,
+        epoch_time_id,
+         -- Location aggregated
+        count(Latitude) as location_count,
+        min(Latitude) as location_Latitude_min,
+        max(Latitude) as location_Latitude_max,
+        avg(Latitude) as location_Latitude_avg,
+        min(Longitude) as location_Longitude_min,
+        max(Longitude) as location_Longitude_max,
+        avg(Longitude) as location_Longitude_avg,
+        min(Altitude) as location_Altitude_min,
+        max(Altitude) as location_Altitude_max,
+        avg(Altitude) as location_Altitude_avg,
+        min(accuracy) as location_accuracy_min,
+        max(accuracy) as location_accuracy_max,
+        avg(accuracy) as location_accuracy_avg,
+        avg(location_Latitude_median) as location_Latitude_median,
+        avg(location_Longitude_median) as location_Longitude_median,
+        avg(location_Altitude_median) as location_Altitude_median,
+        avg(location_accuracy_median) as location_accuracy_median
+    FROM location
+    GROUP BY data_type, epoch_time_id
+),
+wifi as (
+    SELECT
+        cast(round(Epoch_time__ms_, -3) as int64) as epoch_time_id,
+
+        wifi.*,
+
+        PERCENTILE_DISC(wifi.Frequency__MHz_, 0.5) OVER (PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as wifi_Frequency_median,
+        PERCENTILE_DISC(wifi.RSSI, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as wifi_RSSI_median
+    FROM (
+        select *, 'TRAIN' as data_type from `shl-2021.train.wifi`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.wifi`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.wifi`
+    ) wifi
+),
+wifi_agg as (
+    SELECT
+        data_type,
+        epoch_time_id,
+        -- WiFi aggregated
+        count(RSSI) as wifi_count,
+        -- any_value(wifi_BSSID) as wifi_BSSID_any,
+        -- any_value(wifi_SSID) as wifi_SSID_any,
+        any_value(Capabilities) as wifi_Capabilities_any,
+        min(Frequency__MHz_) as wifi_Frequency_min,
+        max(Frequency__MHz_) as wifi_Frequency_max,
+        avg(wifi_Frequency_median) as wifi_Frequency_median,
+        min(RSSI) as wifi_RSSI_min,
+        max(RSSI) as wifi_RSSI_max,
+        avg(wifi_RSSI_median) as wifi_RSSI_median
+    FROM wifi
+    GROUP BY data_type, epoch_time_id
+),
+gps as (
+    SELECT
+        cast(round(Epoch_time__ms_, -3) as int64) as epoch_time_id,
+
+        gps.*,
+
+        PERCENTILE_DISC(gps.ID, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_ID_median,
+        PERCENTILE_DISC(gps.Azimuth__degrees_, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_Azimuth_median,
+        PERCENTILE_DISC(gps.Elevation__degrees_, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_Elevation_median,
+        PERCENTILE_DISC(gps.SNR, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_SNR_median,
+    FROM (
+        select *, 'TRAIN' as data_type from `shl-2021.train.gps`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.gps`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.gps`
+    ) gps
+),
+gps_agg as (
+    SELECT
+        data_type,
+        cast(round(Epoch_time__ms_, -3) as int64) as epoch_time_id,
+         -- GPS aggregated
+        count(Azimuth__degrees_) as gps_count,
+        min(Azimuth__degrees_) as gps_Azimuth_min,
+        max(Azimuth__degrees_) as gps_Azimuth_max,
+        avg(Azimuth__degrees_) as gps_Azimuth_avg,
+        min(Elevation__degrees_) as gps_Elevation_min,
+        max(Elevation__degrees_) as gps_Elevation_max,
+        avg(Elevation__degrees_) as gps_Elevation_avg,
+        min(SNR) as gps_SNR_min,
+        max(SNR) as gps_SNR_max,
+        avg(SNR) as gps_SNR_avg,
+        avg(gps_ID_median) as gps_ID_median,
+        avg(gps_Azimuth_median) as gps_Azimuth_median,
+        avg(gps_Elevation_median) as gps_Elevation_median,
+        avg(gps_SNR_median) as gps_SNR_median
+    FROM gps
+    GROUP BY data_type, epoch_time_id
+),
+aggregated_with_features as (
+    SELECT
+
+        label.*,
+        wifi_names.* EXCEPT (data_type, epoch_time_id),
+        features_location.* EXCEPT (data_type, epoch_time),
+        location_agg.* EXCEPT (data_type, epoch_time_id),
+        wifi_agg.* EXCEPT (data_type, epoch_time_id),
+        gps_agg.* EXCEPT (data_type, epoch_time_id),
+        cell_agg.* EXCEPT (data_type, epoch_time_id)
 
     FROM (
         select *, 'TRAIN' as data_type from `shl-2021.train.label_train`
@@ -78,153 +213,13 @@ raw_data as (
         select *, 'TEST' as data_type from `shl-2021.validate.label`
     ) label
 
-    left join cell_data as cells on cells.epoch_time = label.epoch_time and cells.data_type = label.data_type
-
-
-    left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.location`
-        union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.location`
-        union all
-        select *, 'TEST' as data_type from `shl-2021.validate.location`
-    ) location on cast(round(location.epoch_time, -3) as int64) = label.epoch_time and location.data_type  = label.data_type
-
-    left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.gps`
-        union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.gps`
-        union all
-        select *, 'TEST' as data_type from `shl-2021.validate.gps`
-    ) gps on cast(round(gps.Epoch_time__ms_, -3) as int64) = label.epoch_time and gps.data_type = label.data_type
-
-    left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.wifi`
-        union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.wifi`
-        union all
-        select *, 'TEST' as data_type from `shl-2021.validate.wifi`
-    ) wifi on cast(round(wifi.Epoch_time__ms_, -3) as int64) = label.epoch_time and wifi.data_type = label.data_type
-
---where label.epoch_time = 1493282527000
-),
-
-
-aggragated_data as (
-
-    -- Aggregated data
-    select
-        raw_data.data_type,
-        raw_data.epoch_time,
-        raw_data.label,
-
-        -- Cells aggregated
-        count(cell_available) as cell_count,
-        min(cell_available) as cell_available_min,
-        max(cell_available) as cell_available_max,
-
-        min(cell_isRegistered) as cell_isRegistered_min,
-        max(cell_isRegistered) as cell_isRegistered_max,
-        min(cell_MCC) as cell_MCC_min,
-        max(cell_MCC) as cell_MCC_max,
-        min(cell_MNC) as cell_MNC_min,
-        max(cell_MNC) as cell_MNC_max,
-        min(cell_ci_cid) as cell_ci_cid_min,
-        max(cell_ci_cid) as cell_ci_cid_max,
-        min(cell_TAC_LAC) as cell_TAC_LAC_min,
-        max(cell_TAC_LAC) as cell_TAC_LAC_max,
-        min(cell_PCI_PSC) as cell_PCI_PSC_min,
-        max(cell_PCI_PSC) as cell_PCI_PSC_max,
-        min(cell_asuLevel) as cell_asuLevel_min,
-        max(cell_asuLevel) as cell_asuLevel_max,
-        avg(cell_asuLevel) as cell_asuLevel_avg,
-        min(cell_dBm) as cell_dBm_min,
-        max(cell_dBm) as cell_dBm_max,
-        avg(cell_dBm) as cell_dBm_avg,
-        min(cell_level) as cell_level_min,
-        max(cell_level) as cell_level_max,
-        avg(cell_level) as cell_level_avg,
-
-        avg(cell_ci_cid_median) as cell_ci_cid_median,
-        avg(cell_MCC_median) as cell_MCC_median,
-        avg(cell_MNC_median) as cell_MNC_median,
-        avg(cell_PCI_PSC_median) as cell_PCI_PSC_median,
-        avg(cell_TAC_LAC_median) as cell_TAC_LAC_median,
-
-        avg(cell_available_median) as cell_available_median,
-        avg(cell_isRegistered_median) as cell_isRegistered_median,
-        avg(cell_dBm_median) as cell_dBm_median,
-        avg(cell_asuLevel_median) as cell_asuLevel_median,
-        avg(cell_level_median) as cell_level_median,
-
-        -- Location aggregated
-        count(location_Latitude) as location_count,
-        min(location_Latitude) as location_Latitude_min,
-        max(location_Latitude) as location_Latitude_max,
-        avg(location_Latitude) as location_Latitude_avg,
-        min(location_Longitude) as location_Longitude_min,
-        max(location_Longitude) as location_Longitude_max,
-        avg(location_Longitude) as location_Longitude_avg,
-        min(location_Altitude) as location_Altitude_min,
-        max(location_Altitude) as location_Altitude_max,
-        avg(location_Altitude) as location_Altitude_avg,
-        min(location_accuracy) as location_accuracy_min,
-        max(location_accuracy) as location_accuracy_max,
-        avg(location_accuracy) as location_accuracy_avg,
-        avg(location_Latitude_median) as location_Latitude_median,
-        avg(location_Longitude_median) as location_Longitude_median,
-        avg(location_Altitude_median) as location_Altitude_median,
-        avg(location_accuracy_median) as location_accuracy_median,
-
-        -- GPS aggregated
-        count(gps_Azimuth) as gps_count,
-        min(gps_Azimuth) as gps_Azimuth_min,
-        max(gps_Azimuth) as gps_Azimuth_max,
-        avg(gps_Azimuth) as gps_Azimuth_avg,
-        min(gps_Elevation) as gps_Elevation_min,
-        max(gps_Elevation) as gps_Elevation_max,
-        avg(gps_Elevation) as gps_Elevation_avg,
-        min(gps_SNR) as gps_SNR_min,
-        max(gps_SNR) as gps_SNR_max,
-        avg(gps_SNR) as gps_SNR_avg,
-        avg(gps_ID_median) as gps_ID_median,
-        avg(gps_Azimuth_median) as gps_Azimuth_median,
-        avg(gps_Elevation_median) as gps_Elevation_median,
-        avg(gps_SNR_median) as gps_SNR_median,
-
-        -- WiFi aggregated
-        count(wifi_RSSI) as wifi_count,
-        -- any_value(wifi_BSSID) as wifi_BSSID_any,
-        -- any_value(wifi_SSID) as wifi_SSID_any,
-        any_value(wifi_Capabilities) as wifi_Capabilities_any,
-        min(wifi_Frequency) as wifi_Frequency_min,
-        max(wifi_Frequency) as wifi_Frequency_max,
-        avg(wifi_Frequency_median) as wifi_Frequency_median,
-        min(wifi_RSSI) as wifi_RSSI_min,
-        max(wifi_RSSI) as wifi_RSSI_max,
-        avg(wifi_RSSI_median) as wifi_RSSI_median,
-
-    from raw_data
-    group by data_type,
-             epoch_time,
-             label
-),
-aggregated_with_features as (
-    SELECT
-
-        aggragated_data.*,
-
-        wifi_names.* EXCEPT (data_type, epoch_time_id),
-        features_location.* EXCEPT (data_type, epoch_time)
-
-    FROM aggragated_data
-
     left join (
         select *, 'TRAIN' as data_type from `shl-2021.train.features_wifi_names`
         union all
         select *, 'VALIDATE' as data_type from `shl-2021.train.features_wifi_names`
         union all
         select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_names`
-    ) wifi_names on wifi_names.epoch_time_id = aggragated_data.epoch_time and wifi_names.data_type = aggragated_data.data_type
+    ) wifi_names on wifi_names.epoch_time_id = label.epoch_time and wifi_names.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
@@ -232,7 +227,14 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021.train.features_denys`
         union all
         select *, 'TEST' as data_type from `shl-2021.validate.features_denys`
-    ) features_location on features_location.epoch_time = aggragated_data.epoch_time and features_location.data_type = aggragated_data.data_type
+    ) features_location on features_location.epoch_time = label.epoch_time and features_location.data_type = label.data_type
+
+    LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
+    LEFT JOIN wifi_agg ON wifi_agg.epoch_time_id = label.epoch_time and wifi_agg.data_type = label.data_type
+    LEFT JOIN gps_agg ON gps_agg.epoch_time_id = label.epoch_time and gps_agg.data_type = label.data_type
+    LEFT JOIN cell_agg ON cell_agg.epoch_time_id = label.epoch_time and cell_agg.data_type = label.data_type
+
+    --where label.epoch_time = 1493282527000
 )
 
-select * EXCEPT (epoch_time) FROM aggregated_with_features
+select * FROM aggregated_with_features
