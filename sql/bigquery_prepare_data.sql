@@ -198,7 +198,8 @@ aggregated_with_features as (
     SELECT
 
         label.*,
-        wifi_names.* EXCEPT (data_type, epoch_time_id),
+--         wifi_names.* EXCEPT (data_type, epoch_time_id),
+        wifi_ssid.* EXCEPT (data_type, epoch_time_id),
         features_location.* EXCEPT (data_type, epoch_time),
         location_agg.* EXCEPT (data_type, epoch_time_id),
         wifi_agg.* EXCEPT (data_type, epoch_time_id),
@@ -222,6 +223,14 @@ aggregated_with_features as (
     ) wifi_names on wifi_names.epoch_time_id = label.epoch_time and wifi_names.data_type = label.data_type
 
     left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_wifi_ssid`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_wifi_ssid`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_ssid`
+    ) wifi_ssid on wifi_ssid.epoch_time_id = label.epoch_time and wifi_ssid.data_type = label.data_type
+
+    left join (
         select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
         union all
         select *, 'VALIDATE' as data_type from `shl-2021.train.features_denys`
@@ -237,4 +246,4 @@ aggregated_with_features as (
     --where label.epoch_time = 1493282527000
 )
 
-select * FROM aggregated_with_features
+select * EXCEPT (epoch_time, cell_ci_cid_median, gps_ID_median, cell_ci_cid_min, cell_ci_cid_max) FROM aggregated_with_features
