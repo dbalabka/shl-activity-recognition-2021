@@ -142,8 +142,8 @@ wifi_agg as (
         epoch_time_id,
         -- WiFi aggregated
         count(RSSI) as wifi_count,
-        -- any_value(wifi_BSSID) as wifi_BSSID_any,
-        -- any_value(wifi_SSID) as wifi_SSID_any,
+        any_value(BSSID) as wifi_BSSID_any,
+        any_value(SSID) as wifi_SSID_any,
         any_value(Capabilities) as wifi_Capabilities_any,
         min(Frequency__MHz_) as wifi_Frequency_min,
         max(Frequency__MHz_) as wifi_Frequency_max,
@@ -199,10 +199,11 @@ aggregated_with_features as (
 
         label.*,
 --         wifi_names.* EXCEPT (data_type, epoch_time_id),
-        wifi_ssid.* EXCEPT (data_type, epoch_time_id),
+--         wifi_ssid.* EXCEPT (data_type, epoch_time_id),
+        wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id),
         features_location.* EXCEPT (data_type, epoch_time),
         location_agg.* EXCEPT (data_type, epoch_time_id),
-        wifi_agg.* EXCEPT (data_type, epoch_time_id),
+        wifi_agg.* EXCEPT (data_type, epoch_time_id, wifi_SSID_any),
         gps_agg.* EXCEPT (data_type, epoch_time_id),
         cell_agg.* EXCEPT (data_type, epoch_time_id)
 
@@ -229,6 +230,14 @@ aggregated_with_features as (
         union all
         select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_ssid`
     ) wifi_ssid on wifi_ssid.epoch_time_id = label.epoch_time and wifi_ssid.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_wifi_ssid_concat`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_wifi_ssid_concat`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_ssid_concat`
+    ) wifi_ssid_concat on wifi_ssid_concat.epoch_time_id = label.epoch_time and wifi_ssid_concat.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
