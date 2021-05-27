@@ -255,4 +255,4 @@ aggregated_with_features as (
     --where label.epoch_time = 1493282527000
 )
 
-select * EXCEPT (epoch_time, cell_ci_cid_median, gps_ID_median, cell_ci_cid_min, cell_ci_cid_max) FROM aggregated_with_features
+select * EXCEPT (epoch_time) FROM aggregated_with_features
