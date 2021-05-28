@@ -148,7 +148,6 @@ cell_agg as (
     -- Aggregated data
     select  data_type,
     epoch_time as epoch_time_id,
-    label,
 
     -- Cells aggregated
     count(lte_available) as cells_count,
@@ -231,8 +230,8 @@ cell_agg as (
 
     from cells_raw
     group by data_type,
-    epoch_time,
-    label
+    epoch_time
+
 ),
 location as (
     SELECT
@@ -355,6 +354,16 @@ aggregated_with_features as (
     SELECT
 
         label.*,
+
+        ifnull(location_agg.epoch_time_id, 0) as location_available,
+        ifnull(wifi_agg.epoch_time_id, 0) as wifi_available,
+        ifnull(gps_agg.epoch_time_id, 0) as gps_available,
+        ifnull(cell_agg.epoch_time_id, 0) as cell_available,
+        if(ifnull(location_agg.epoch_time_id, 0)
+           + ifnull(wifi_agg.epoch_time_id, 0)
+           + ifnull(gps_agg.epoch_time_id, 0)
+           + ifnull(cell_agg.epoch_time_id, 0) > 0, 1, 0) as any_feature_available,
+
 --         wifi_names.* EXCEPT (data_type, epoch_time_id),
 --         wifi_ssid.* EXCEPT (data_type, epoch_time_id),
         wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id),
