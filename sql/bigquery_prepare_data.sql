@@ -2,7 +2,6 @@ with cells_raw as (
 
     SELECT  label.data_type,
             label.epoch_time,
-            label.label,
 
             -- Cells
             cells.lte_available,
