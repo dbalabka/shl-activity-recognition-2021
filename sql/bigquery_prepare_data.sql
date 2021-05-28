@@ -355,14 +355,14 @@ aggregated_with_features as (
 
         label.*,
 
-        ifnull(location_agg.epoch_time_id, 0) as location_available,
-        ifnull(wifi_agg.epoch_time_id, 0) as wifi_available,
-        ifnull(gps_agg.epoch_time_id, 0) as gps_available,
-        ifnull(cell_agg.epoch_time_id, 0) as cell_available,
-        if(ifnull(location_agg.epoch_time_id, 0)
-           + ifnull(wifi_agg.epoch_time_id, 0)
-           + ifnull(gps_agg.epoch_time_id, 0)
-           + ifnull(cell_agg.epoch_time_id, 0) > 0, 1, 0) as any_feature_available,
+        if(location_agg.epoch_time_id is null, 0, 1) as location_available,
+        if(wifi_agg.epoch_time_id is null, 0, 1) as wifi_available,
+        if(gps_agg.epoch_time_id is null, 0, 1) as gps_available,
+        if(cell_agg.epoch_time_id is null, 0, 1) as cell_available,
+        if(if(location_agg.epoch_time_id is null, 0, 1)
+        + if(wifi_agg.epoch_time_id is null, 0, 1)
+        + if(gps_agg.epoch_time_id is null, 0, 1)
+        + if(cell_agg.epoch_time_id is null, 0, 1) > 0, 1, 0) as any_feature_available,
 
 --         wifi_names.* EXCEPT (data_type, epoch_time_id),
 --         wifi_ssid.* EXCEPT (data_type, epoch_time_id),
