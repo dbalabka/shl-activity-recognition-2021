@@ -24,6 +24,8 @@ featuretools = "^0.24.0"
 plotly = "^4.14.3"
 ipywidgets = "^7.6.3"
 gensim = "^4.0.1"
+tsfresh = "^0.18.0"
+pandavro = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 
