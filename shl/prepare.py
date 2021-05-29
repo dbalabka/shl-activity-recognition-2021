@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+from typing import List, Optional, Tuple
+import re
 
 
 def parse_csv(path, columns, numeric_columns, sep=';', chunk_size=5, head_size=4, tail_columns_count=0):
@@ -33,7 +35,7 @@ def normalize_lat_long(df: pd.DataFrame, lat_column: str = 'Latitude', long_colu
 
 # Fill NA values in dataframe
 # change columns - 0, other columns - forward and backward
-def fill_na(df):   
+def fill_na(df: pd.DataFrame):   
     columns = df.columns
     change_columns = [col for col in columns if 'change' in col]       
     df = df.replace([np.inf, -np.inf], np.nan)    
@@ -44,12 +46,12 @@ def fill_na(df):
 
 
 # Add columns with abs values for selected columns of dataframe
-def calculate_abs_values(df, columns):
+def calculate_abs_values(df: pd.DataFrame, columns: List[str]):
     df[[f'abs_{col}' for col in columns]] = df[[col for col in columns]].abs()
 
 
 # Return diff dataframe with renamed columns     
-def calculate_change(df):   
+def calculate_change(df: pd.DataFrame):   
     columns = df.columns
     new_columns = [col + '_change' for col in columns]
     rename_dict = {item[0]: item[1] for item in zip(columns, new_columns)}    
@@ -57,8 +59,17 @@ def calculate_change(df):
     return fill_na(df)
 
 
+# Return percent change dataframe with renamed columns     
+def calculate_pct_change(df: pd.DataFrame):   
+    columns = df.columns
+    new_columns = [col + '_pct_change' for col in columns]
+    rename_dict = {item[0]: item[1] for item in zip(columns, new_columns)}    
+    df = df.pct_change(fill_method='bfill').rename(columns=rename_dict)
+    return df
+
+
 # Add window columns
-def calculate_window(df, functions, window_sizes, window_center=True, columns=None):    
+def calculate_window(df: pd.DataFrame, functions: List[str], window_sizes: List[int], window_center=True, columns=None):    
     if columns is None:
         columns = df.columns[1:]   
     for window_size in window_sizes:            
@@ -72,8 +83,13 @@ def calculate_window(df, functions, window_sizes, window_center=True, columns=No
 
     
 # Add columns with shifted values
-def calculate_shift(df, periods, columns_pattern):    
-    columns = [col for col in df.columns if columns_pattern in col]
-    for period in periods:
-        df[[f'{col}_shift_{abs(period)}_{"future" if period < 0 else "past"}' for col in columns]] = fill_na(df[[col for col in columns]].shift(periods=period))        
+def calculate_shift(df: pd.DataFrame, periods: List[int], columns_patterns: List[str]):   
+    #print('Shift started')
+    #print(df.columns)
+    #print(columns_patterns)
+    for period, pattern in zip(periods, columns_patterns):
+        columns = [col for col in df.columns if re.search(pattern, col)]
+        #print(columns)
+        df[[f'{col}_shift_{period}_past' for col in columns]] = fill_na(df[[col for col in columns]].shift(periods=period))
+        df[[f'{col}_shift_{period}_future' for col in columns]] = fill_na(df[[col for col in columns]].shift(periods=-period))        
     return df
