@@ -26,6 +26,7 @@ ipywidgets = "^7.6.3"
 gensim = "^4.0.1"
 tsfresh = "^0.18.0"
 pandavro = "^1.6.0"
+folium = "^0.12.1"
 
 [tool.poetry.dev-dependencies]
 
