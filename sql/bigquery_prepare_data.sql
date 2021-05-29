@@ -406,11 +406,11 @@ aggregated_with_features as (
     ) wifi_ssid_concat on wifi_ssid_concat.epoch_time_id = label.epoch_time and wifi_ssid_concat.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.features_denys`
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_location`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.features_denys`
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location`
         union all
-        select *, 'TEST' as data_type from `shl-2021.validate.features_denys`
+        select *, 'TEST' as data_type from `shl-2021.validate.features_location`
     ) features_location on features_location.epoch_time = label.epoch_time and features_location.data_type = label.data_type
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
