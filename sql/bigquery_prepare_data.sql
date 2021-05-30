@@ -367,7 +367,10 @@ aggregated_with_features as (
 --         wifi_names.* EXCEPT (data_type, epoch_time_id),
 --         wifi_ssid.* EXCEPT (data_type, epoch_time_id),
         wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id),
-        features_location.* EXCEPT (data_type, epoch_time, accuracy, Altitude, Latitude, Longitude),
+        features_location_part_0.* EXCEPT (data_type, epoch_time),
+        features_location_part_1.* EXCEPT (data_type, epoch_time),
+        features_location_part_2.* EXCEPT (data_type, epoch_time),
+        features_location_part_3.* EXCEPT (data_type, epoch_time),
         location_agg.* EXCEPT (data_type, epoch_time_id),
         wifi_agg.* EXCEPT (data_type, epoch_time_id, wifi_SSID_any),
         gps_agg.* EXCEPT (data_type, epoch_time_id),
@@ -406,12 +409,37 @@ aggregated_with_features as (
     ) wifi_ssid_concat on wifi_ssid_concat.epoch_time_id = label.epoch_time and wifi_ssid_concat.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021.train.features_location`
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_location_part_0`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location`
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location_part_0`
         union all
-        select *, 'TEST' as data_type from `shl-2021.validate.features_location`
-    ) features_location on features_location.epoch_time = label.epoch_time and features_location.data_type = label.data_type
+        select *, 'TEST' as data_type from `shl-2021.validate.features_location_part_0`
+    ) features_location_part_0 on features_location_part_0.epoch_time = label.epoch_time and features_location_part_0.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_location_part_1`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location_part_1`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_location_part_1`
+    ) features_location_part_1 on features_location_part_1.epoch_time = label.epoch_time and features_location_part_1.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_location_part_2`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location_part_2`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_location_part_2`
+    ) features_location_part_2 on features_location_part_2.epoch_time = label.epoch_time and features_location_part_2.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_location_part_3`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_location_part_3`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_location_part_3`
+    ) features_location_part_3 on features_location_part_3.epoch_time = label.epoch_time and features_location_part_3.data_type = label.data_type
+
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
     LEFT JOIN wifi_agg ON wifi_agg.epoch_time_id = label.epoch_time and wifi_agg.data_type = label.data_type
