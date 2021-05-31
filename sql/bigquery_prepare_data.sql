@@ -370,6 +370,7 @@ aggregated_with_features as (
         features_location_part_3.* EXCEPT (data_type, epoch_time),
         location_agg.* EXCEPT (data_type, epoch_time_id),
         wifi_agg.* EXCEPT (data_type, epoch_time_id, wifi_SSID_any, wifi_BSSID_any),
+        wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id),
         gps_agg.* EXCEPT (data_type, epoch_time_id),
         cell_agg.* EXCEPT (data_type, epoch_time_id)
 
@@ -412,6 +413,14 @@ aggregated_with_features as (
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_3`
     ) features_location_part_3 on features_location_part_3.epoch_time = label.epoch_time and features_location_part_3.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021.train.features_wifi_ssid_concat`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021.train.features_wifi_ssid_concat`
+        union all
+        select *, 'TEST' as data_type from `shl-2021.validate.features_wifi_ssid_concat`
+    ) wifi_ssid_concat on wifi_ssid_concat.epoch_time_id = label.epoch_time and wifi_ssid_concat.data_type = label.data_type
 
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
