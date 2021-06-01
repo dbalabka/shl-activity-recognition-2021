@@ -374,7 +374,8 @@ aggregated_with_features as (
         gps_agg.* EXCEPT (data_type, epoch_time_id),
         cell_agg.* EXCEPT (data_type, epoch_time_id),
         features_distances.* EXCEPT (data_type, epoch_time_id),
-        features_cells.* EXCEPT (data_type, epoch_time)
+        features_cells.* EXCEPT (data_type, epoch_time),
+        features_gps.* EXCEPT (data_type, epoch_time)
 
     FROM (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.label_train`
@@ -439,6 +440,14 @@ aggregated_with_features as (
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_cells`
     ) features_cells on features_cells.epoch_time = label.epoch_time and features_cells.data_type = label.data_type
+
+    left join (
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_gps`
+        union all
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_gps`
+        union all
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_gps`
+    ) features_gps on features_gps.epoch_time = label.epoch_time and features_gps.data_type = label.data_type
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
     LEFT JOIN wifi_agg ON wifi_agg.epoch_time_id = label.epoch_time and wifi_agg.data_type = label.data_type
