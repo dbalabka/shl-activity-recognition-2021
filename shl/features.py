@@ -1,9 +1,12 @@
-from typing import Tuple, List, Optional, Union
+from typing import Tuple, List, Optional, Union, Dict
 import re
 import matplotlib.pyplot as plt
 
 import numpy as np
+import requests
 from pandas import DataFrame, Series
+import pandas as pd
+import os
 from scipy.sparse import csr_matrix
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -88,3 +91,32 @@ class WifiFeature:
                 plt.hist(features.indices)
             else:
                 plt.hist(features[self.__column_prefix + str(i)])
+
+
+class NoLocationFoundException(Exception):
+    def __init__(self, message, cells):
+        self.cells = cells
+        self.message = message
+
+
+GEOLOCATION_API_URL = 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + os.getenv('GOOGLE_GEOLOCATION_API_KEY')
+# GEOLOCATION_API_URL = 'https://backend.radiocells.org'
+
+def fetch_location(cells: DataFrame) -> Dict:
+    request_body = {
+        "cellTowers": [{
+            "cellId": int(cell.ci if not pd.isna(cell.ci) else cell.cid),
+            "locationAreaCode": int(cell.TAC if not pd.isna(cell.ci) else cell.lac),
+            "mobileCountryCode": int(cell.MCC),
+            "mobileNetworkCode": int(cell.MNC)
+        } for _, cell in cells.iterrows() if type(cell.ci) is not np.nan]
+    }
+    resp = requests.post(GEOLOCATION_API_URL, json=request_body)
+    if resp.status_code == 200:
+        # {"location": {"lat": 48.85702, "lng": 2.29520}, "accuracy": 30}
+        location = resp.json()
+        return {"Latitude": location['location']['lat'], "Longitude": location['location']['lng'], "accuracy": location['accuracy']}
+    elif resp.status_code == 404:
+        raise NoLocationFoundException('No location found', request_body)
+    else:
+        raise Exception(f'Service return {resp.status_code}')
