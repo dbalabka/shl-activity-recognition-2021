@@ -102,6 +102,7 @@ class NoLocationFoundException(Exception):
 GEOLOCATION_API_URL = 'https://www.googleapis.com/geolocation/v1/geolocate?key=' + os.getenv('GOOGLE_GEOLOCATION_API_KEY')
 # GEOLOCATION_API_URL = 'https://backend.radiocells.org'
 
+
 def fetch_location(cells: DataFrame) -> Dict:
     request_body = {
         "cellTowers": [{
