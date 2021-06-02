@@ -4,12 +4,14 @@ import matplotlib.pyplot as plt
 
 import numpy as np
 import requests
+import folium
 from pandas import DataFrame, Series
 import pandas as pd
 import os
 from scipy.sparse import csr_matrix
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
+import branca.colormap as cm
 
 
 def add_space_before_ids(text: str) -> str:
@@ -121,3 +123,37 @@ def fetch_location(cells: DataFrame) -> Dict:
         raise NoLocationFoundException('No location found', request_body)
     else:
         raise Exception(f'Service return {resp.status_code}')
+
+
+def visualize_trace(data_location_with_label):
+    m = folium.Map(location=[data_location_with_label.iloc[1].Latitude, data_location_with_label.iloc[1].Longitude], zoom_start=10, tiles=None, control_scale=True)
+
+    folium.LatLngPopup().add_to(m)
+    folium.raster_layers.TileLayer('OpenStreetMap', opacity=0.5).add_to(m)
+    # folium.raster_layers.TileLayer('Stamen Toner',show=False, opacity=0.5).add_to(m)
+    # folium.map.LayerControl().add_to(m)
+
+    label_colors = {
+        1: 'red',
+        2: 'blue',
+        3: 'green',
+        4: 'purple',
+        5: 'orange',
+        6: 'darkred',
+        7: 'violet',
+        8: 'black',
+        9: 'white',
+    }
+
+    colormap = cm.StepColormap(colors=label_colors.values(), vmax=max(label_colors.keys()), vmin=min(label_colors.keys()))
+    colormap.caption = 'Still=1, Walking=2, Run=3, Bike=4, Car=5, Bus=6, Train=7, Subway=8'
+    colormap.add_to(m)
+
+    folium.features.ColorLine(
+        list(zip(data_location_with_label.Latitude.to_list(), data_location_with_label.Longitude.tolist())),
+        colors=data_location_with_label.label.to_list(),
+        colormap=colormap,
+    ).add_to(m)
+
+
+    return m
