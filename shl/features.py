@@ -125,8 +125,13 @@ def fetch_location(cells: DataFrame) -> Dict:
         raise Exception(f'Service return {resp.status_code}')
 
 
-def visualize_trace(data_location_with_label):
-    m = folium.Map(location=[data_location_with_label.iloc[1].Latitude, data_location_with_label.iloc[1].Longitude], zoom_start=10, tiles=None, control_scale=True)
+def visualize_trace(data_location_with_label, markers=False):
+    m = folium.Map(
+        location=[data_location_with_label.iloc[1].Latitude, data_location_with_label.iloc[1].Longitude],
+        zoom_start=10,
+        tiles=None,
+        control_scale=True,
+    )
 
     folium.LatLngPopup().add_to(m)
     folium.raster_layers.TileLayer('OpenStreetMap', opacity=0.5).add_to(m)
@@ -149,11 +154,15 @@ def visualize_trace(data_location_with_label):
     colormap.caption = 'Still=1, Walking=2, Run=3, Bike=4, Car=5, Bus=6, Train=7, Subway=8'
     colormap.add_to(m)
 
-    folium.features.ColorLine(
-        list(zip(data_location_with_label.Latitude.to_list(), data_location_with_label.Longitude.tolist())),
-        colors=data_location_with_label.label.to_list(),
-        colormap=colormap,
-    ).add_to(m)
+    if not markers:
+        folium.features.ColorLine(
+            list(zip(data_location_with_label.Latitude.to_list(), data_location_with_label.Longitude.tolist())),
+            colors=data_location_with_label.label.to_list(),
+            colormap=colormap,
+        ).add_to(m)
+    else:
+        for lat, lng in zip(data_location_with_label.Latitude.to_list(), data_location_with_label.Longitude.tolist()):
+            folium.vector_layers.CircleMarker(location=(lat, lng), radius=3).add_to(m)
 
 
     return m
