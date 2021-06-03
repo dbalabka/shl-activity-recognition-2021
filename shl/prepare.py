@@ -29,6 +29,7 @@ def parse_csv(path, columns, numeric_columns, sep=';', chunk_size=5, head_size=4
 def normalize_epoch_time(df: pd.DataFrame, column: str):
     return df.assign(epoch_time_id=lambda x: x[column].round(-3))
 
+
 def normalize_lat_long(df: pd.DataFrame, lat_column: str = 'Latitude', long_column: str = 'Longitude'):
     return df.assign(latlong=lambda x: x[[lat_column, long_column]].apply(tuple, axis=1))
 
@@ -78,7 +79,9 @@ def calculate_window(df: pd.DataFrame, fill_limit, functions: List[str], window_
                 if func == 'mean': 
                     df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).mean()
                 elif func == 'std':      
-                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).std()    
+                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).std()
+                elif func == 'median':
+                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).median()
     return fill_na(df, fill_limit)
 
     
