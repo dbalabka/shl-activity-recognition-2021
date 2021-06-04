@@ -2,3 +2,4 @@
 /.venv/
 /data/
 /.env
+/additional_data/bus_*
