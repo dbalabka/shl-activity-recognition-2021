@@ -51,7 +51,7 @@ def fillna_agg_by_label(df: pd.DataFrame, label: pd.DataFrame, limit: int = 30, 
         .merge(normalize_epoch_time(df, epoch_time_col), on="epoch_time_id", how='outer') \
         .fillna(method='ffill', limit=limit, axis=0) \
         .fillna(method='bfill', limit=limit, axis=0) \
-        .query(f'~{epoch_time_col}.isna()')
+        .dropna(how="all", subset=[col for col in df.columns if col != epoch_time_col])
 
 
 
