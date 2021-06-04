@@ -50,7 +50,10 @@ def fillna_agg_by_label(df: pd.DataFrame, label: pd.DataFrame, limit: int, epoch
     return normalize_epoch_time(label, 'epoch_time')[['epoch_time_id']]\
         .merge(normalize_epoch_time(df, epoch_time_col), on="epoch_time_id", how='outer') \
         .fillna(method='ffill', limit=limit, axis=0) \
-        .fillna(method='bfill', limit=limit, axis=0)
+        .fillna(method='bfill', limit=limit, axis=0) \
+        .query(f'~{epoch_time_col}.isna()')
+
+
 
 
 # Add columns with abs values for selected columns of dataframe
