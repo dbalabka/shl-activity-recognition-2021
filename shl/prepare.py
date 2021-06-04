@@ -66,7 +66,7 @@ def calculate_change(df: pd.DataFrame, fill_limit):
     columns = df.columns
     new_columns = [col + '_change' for col in columns]
     rename_dict = {item[0]: item[1] for item in zip(columns, new_columns)}    
-    df = df.diff().rename(columns=rename_dict)
+    df = df.diff().rename(columns=rename_dict).astype('float32')
     return fill_na(df, fill_limit)
 
 
@@ -75,7 +75,7 @@ def calculate_pct_change(df: pd.DataFrame):
     columns = df.columns
     new_columns = [col + '_pct_change' for col in columns]
     rename_dict = {item[0]: item[1] for item in zip(columns, new_columns)}    
-    df = df.pct_change(fill_method='bfill').rename(columns=rename_dict)
+    df = df.pct_change(fill_method='bfill').rename(columns=rename_dict).astype('float32')
     return df
 
 
@@ -87,11 +87,11 @@ def calculate_window(df: pd.DataFrame, fill_limit, functions: List[str], window_
         for column in columns:
             for func in functions:
                 if func == 'mean': 
-                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).mean()
+                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).mean().astype('float32')
                 elif func == 'std':      
-                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).std()
+                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).std().astype('float32')
                 elif func == 'median':
-                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).median()
+                    df[column + '_window_' + str(window_size) + '_' + func] = df[column].rolling(window=window_size, center=window_center).median().astype('float32')
     return fill_na(df, fill_limit)
 
     
