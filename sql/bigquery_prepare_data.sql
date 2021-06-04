@@ -364,17 +364,17 @@ aggregated_with_features as (
         + if(gps_agg.epoch_time_id is null, 0, 1)
         + if(cell_agg.MCC_min is null, 0, 1) > 0, 1, 0) as any_feature_available,
 
-        features_location_part_0.* EXCEPT (data_type, epoch_time),
-        features_location_part_1.* EXCEPT (data_type, epoch_time),
-        features_location_part_2.* EXCEPT (data_type, epoch_time),
-        features_location_part_3.* EXCEPT (data_type, epoch_time),
+        features_location_part_0.* EXCEPT (data_type, epoch_time, epoch_time_id),
+        features_location_part_1.* EXCEPT (data_type, epoch_time, epoch_time_id),
+        features_location_part_2.* EXCEPT (data_type, epoch_time, epoch_time_id),
+        features_location_part_3.* EXCEPT (data_type, epoch_time, epoch_time_id),
         location_agg.* EXCEPT (data_type, epoch_time_id),
         wifi_agg.* EXCEPT (data_type, epoch_time_id, wifi_SSID_any, wifi_BSSID_any, wifi_Capabilities_any),
         wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id, __index_level_0__),
         gps_agg.* EXCEPT (data_type, epoch_time_id),
         cell_agg.* EXCEPT (data_type, epoch_time_id),
         features_distances.* EXCEPT (data_type, epoch_time_id),
-        features_cells.* EXCEPT (data_type, epoch_time),
+        features_cells.* EXCEPT (data_type, epoch_time, epoch_time_id),
 
     FROM (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.label_train`
@@ -390,7 +390,7 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_0`
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_0`
-    ) features_location_part_0 on features_location_part_0.epoch_time = label.epoch_time and features_location_part_0.data_type = label.data_type
+    ) features_location_part_0 on features_location_part_0.epoch_time_id = label.epoch_time and features_location_part_0.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_1`
@@ -398,7 +398,7 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_1`
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_1`
-    ) features_location_part_1 on features_location_part_1.epoch_time = label.epoch_time and features_location_part_1.data_type = label.data_type
+    ) features_location_part_1 on features_location_part_1.epoch_time_id = label.epoch_time and features_location_part_1.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_2`
@@ -406,7 +406,7 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_2`
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_2`
-    ) features_location_part_2 on features_location_part_2.epoch_time = label.epoch_time and features_location_part_2.data_type = label.data_type
+    ) features_location_part_2 on features_location_part_2.epoch_time_id = label.epoch_time and features_location_part_2.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_3`
@@ -414,7 +414,7 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_3`
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_3`
-    ) features_location_part_3 on features_location_part_3.epoch_time = label.epoch_time and features_location_part_3.data_type = label.data_type
+    ) features_location_part_3 on features_location_part_3.epoch_time_id = label.epoch_time and features_location_part_3.data_type = label.data_type
 
     left join (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_wifi_ssid_cap_bssid_concat`
@@ -438,7 +438,7 @@ aggregated_with_features as (
         select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_cells`
         union all
         select *, 'TEST' as data_type from `shl-2021-315220.validate.features_cells`
-    ) features_cells on features_cells.epoch_time = label.epoch_time and features_cells.data_type = label.data_type
+    ) features_cells on features_cells.epoch_time_id = label.epoch_time and features_cells.data_type = label.data_type
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
     LEFT JOIN wifi_agg ON wifi_agg.epoch_time_id = label.epoch_time and wifi_agg.data_type = label.data_type
