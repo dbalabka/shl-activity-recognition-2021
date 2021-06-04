@@ -78,9 +78,9 @@ with cells_raw as (
                ifnull(gsm.level, 0) as gsm_level,
                ifnull(wcdma.level, 0) as wcdma_level,
 
-        from (select * from `shl-2021-315220.train.Cells_i` where cell_type='LTE') lte
-                 full outer join (select * from `shl-2021-315220.train.Cells_i` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
-                 full outer join (select * from `shl-2021-315220.train.Cells_i` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+        from (select * from `shl-2021-315220.train.cells` where cell_type='LTE') lte
+                 full outer join (select * from `shl-2021-315220.train.cells` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+                 full outer join (select * from `shl-2021-315220.train.cells` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
 
         union all
 
@@ -107,9 +107,9 @@ with cells_raw as (
                ifnull(gsm.level, 0) as gsm_level,
                ifnull(wcdma.level, 0) as wcdma_level,
 
-        from (select * from `shl-2021-315220.train.Cells_i` where cell_type='LTE') lte
-                 full outer join (select * from `shl-2021-315220.train.Cells_i` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
-                 full outer join (select * from `shl-2021-315220.train.Cells_i` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+        from (select * from `shl-2021-315220.train.cells` where cell_type='LTE') lte
+                 full outer join (select * from `shl-2021-315220.train.cells` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+                 full outer join (select * from `shl-2021-315220.train.cells` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
 
         union all
 
@@ -136,9 +136,9 @@ with cells_raw as (
                ifnull(gsm.level, 0) as gsm_level,
                ifnull(wcdma.level, 0) as wcdma_level,
 
-        from (select * from `shl-2021-315220.validate.Cells_i` where cell_type='LTE') lte
-                 full outer join (select * from `shl-2021-315220.validate.Cells_i` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
-                 full outer join (select * from `shl-2021-315220.validate.Cells_i` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+        from (select * from `shl-2021-315220.validate.cells` where cell_type='LTE') lte
+                 full outer join (select * from `shl-2021-315220.validate.cells` where cell_type='GSM') gsm on cast(round(gsm.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
+                 full outer join (select * from `shl-2021-315220.validate.cells` where cell_type='WCDMA') wcdma on cast(round(wcdma.epoch_time, -3) as int64) = cast(round(lte.epoch_time, -3) as int64)
 
     ) cells on cells.epoch_time = label.epoch_time and cells.data_type = label.data_type
 
@@ -244,11 +244,11 @@ location as (
         PERCENTILE_CONT(Altitude, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_Altitude_median,
         PERCENTILE_CONT(accuracy, 0.5) OVER(PARTITION BY cast(round(epoch_time, -3) as int64)) as location_accuracy_median
     FROM (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.Location_i`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.location`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.Location_i`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.location`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.Location_i`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.location`
     ) location
 ),
 location_agg as (
@@ -285,11 +285,11 @@ wifi as (
         PERCENTILE_DISC(wifi.Frequency__MHz_, 0.5) OVER (PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as wifi_Frequency_median,
         PERCENTILE_DISC(wifi.RSSI, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as wifi_RSSI_median
     FROM (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.WiFi_i`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.wifi`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.WiFi_i`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.wifi`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.WiFi_i`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.wifi`
     ) wifi
 ),
 wifi_agg as (
@@ -321,11 +321,11 @@ gps as (
         PERCENTILE_DISC(gps.Elevation__degrees_, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_Elevation_median,
         PERCENTILE_DISC(gps.SNR, 0.5) OVER(PARTITION BY cast(round(Epoch_time__ms_, -3) as int64)) as gps_SNR_median,
     FROM (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.GPS_i`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.gps`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.GPS_i`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.gps`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.GPS_i`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.gps`
     ) gps
 ),
 gps_agg as (
@@ -375,7 +375,6 @@ aggregated_with_features as (
         cell_agg.* EXCEPT (data_type, epoch_time_id),
         features_distances.* EXCEPT (data_type, epoch_time_id),
         features_cells.* EXCEPT (data_type, epoch_time),
-        features_gps.* EXCEPT (data_type, epoch_time)
 
     FROM (
         select *, 'TRAIN' as data_type from `shl-2021-315220.train.label_train`
@@ -386,35 +385,35 @@ aggregated_with_features as (
     ) label
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_i_part_0`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_0`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_i_part_0`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_0`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_i_part_0`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_0`
     ) features_location_part_0 on features_location_part_0.epoch_time = label.epoch_time and features_location_part_0.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_i_part_1`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_1`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_i_part_1`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_1`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_i_part_1`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_1`
     ) features_location_part_1 on features_location_part_1.epoch_time = label.epoch_time and features_location_part_1.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_i_part_2`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_2`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_i_part_2`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_2`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_i_part_2`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_2`
     ) features_location_part_2 on features_location_part_2.epoch_time = label.epoch_time and features_location_part_2.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_i_part_3`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_location_part_3`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_i_part_3`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_location_part_3`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_i_part_3`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_location_part_3`
     ) features_location_part_3 on features_location_part_3.epoch_time = label.epoch_time and features_location_part_3.data_type = label.data_type
 
     left join (
@@ -434,20 +433,12 @@ aggregated_with_features as (
     ) features_distances on features_distances.epoch_time_id = label.epoch_time and features_distances.data_type = label.data_type
 
     left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_cells_i`
+        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_cells`
         union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_cells_i`
+        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_cells`
         union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_cells_i`
+        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_cells`
     ) features_cells on features_cells.epoch_time = label.epoch_time and features_cells.data_type = label.data_type
-
-    left join (
-        select *, 'TRAIN' as data_type from `shl-2021-315220.train.features_gps`
-        union all
-        select *, 'VALIDATE' as data_type from `shl-2021-315220.train.features_gps`
-        union all
-        select *, 'TEST' as data_type from `shl-2021-315220.validate.features_gps`
-    ) features_gps on features_gps.epoch_time = label.epoch_time and features_gps.data_type = label.data_type
 
     LEFT JOIN location_agg ON location_agg.epoch_time_id = label.epoch_time and location_agg.data_type = label.data_type
     LEFT JOIN wifi_agg ON wifi_agg.epoch_time_id = label.epoch_time and wifi_agg.data_type = label.data_type
