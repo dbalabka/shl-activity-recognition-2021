@@ -303,6 +303,77 @@ aggregated_with_features as (
         cell_agg.* EXCEPT (epoch_time_id),
         features_distances.* EXCEPT (epoch_time_id, __index_level_0__),
         features_routes_distances.* EXCEPT (epoch_time_id, __index_level_0__),
+        features_cell_distances.* EXCEPT (
+            epoch_time_id,
+            distance_London_window_60_mean	,
+            distance_Brighton_window_60_mean	,
+            distance_parks_window_60_mean	,
+            distance_bus_stops_window_60_mean	,
+            distance_London_window_300_mean	,
+            distance_Brighton_window_300_mean	,
+            distance_parks_window_300_mean	,
+            distance_bus_stops_window_300_mean	,
+            distance_London_window_600_mean	,
+            distance_Brighton_window_600_mean	,
+            distance_parks_window_600_mean	,
+            distance_bus_stops_window_600_mean	,
+            distance_London_window_60_mean_shift_60_past	,
+            distance_Brighton_window_60_mean_shift_60_past	,
+            distance_parks_window_60_mean_shift_60_past	,
+            distance_bus_stops_window_60_mean_shift_60_past	,
+            distance_London_window_300_mean_shift_60_past	,
+            distance_Brighton_window_300_mean_shift_60_past	,
+            distance_parks_window_300_mean_shift_60_past	,
+            distance_bus_stops_window_300_mean_shift_60_past	,
+            distance_London_window_600_mean_shift_60_past	,
+            distance_Brighton_window_600_mean_shift_60_past	,
+            distance_parks_window_600_mean_shift_60_past	,
+            distance_bus_stops_window_600_mean_shift_60_past	,
+            distance_London_window_60_mean_shift_60_future	,
+            distance_Brighton_window_60_mean_shift_60_future	,
+            distance_parks_window_60_mean_shift_60_future	,
+            distance_bus_stops_window_60_mean_shift_60_future	,
+            distance_London_window_300_mean_shift_60_future	,
+            distance_Brighton_window_300_mean_shift_60_future	,
+            distance_parks_window_300_mean_shift_60_future	,
+            distance_bus_stops_window_300_mean_shift_60_future	,
+            distance_London_window_600_mean_shift_60_future	,
+            distance_Brighton_window_600_mean_shift_60_future	,
+            distance_parks_window_600_mean_shift_60_future	,
+            distance_bus_stops_window_600_mean_shift_60_future,
+            __index_level_0__
+        ),
+        features_cell_routes_distances.* EXCEPT (
+            epoch_time_id,
+            distance_bus_routes_window_60_mean	,
+            distance_subway_window_60_mean	,
+            distance_railways_window_60_mean	,
+            distance_bus_routes_window_300_mean	,
+            distance_subway_window_300_mean	,
+            distance_railways_window_300_mean	,
+            distance_bus_routes_window_600_mean	,
+            distance_subway_window_600_mean	,
+            distance_railways_window_600_mean	,
+            distance_bus_routes_window_60_mean_shift_60_past	,
+            distance_subway_window_60_mean_shift_60_past	,
+            distance_railways_window_60_mean_shift_60_past	,
+            distance_bus_routes_window_300_mean_shift_60_past	,
+            distance_subway_window_300_mean_shift_60_past	,
+            distance_railways_window_300_mean_shift_60_past	,
+            distance_bus_routes_window_600_mean_shift_60_past	,
+            distance_subway_window_600_mean_shift_60_past	,
+            distance_railways_window_600_mean_shift_60_past	,
+            distance_bus_routes_window_60_mean_shift_60_future	,
+            distance_subway_window_60_mean_shift_60_future	,
+            distance_railways_window_60_mean_shift_60_future	,
+            distance_bus_routes_window_300_mean_shift_60_future	,
+            distance_subway_window_300_mean_shift_60_future	,
+            distance_railways_window_300_mean_shift_60_future	,
+            distance_bus_routes_window_600_mean_shift_60_future	,
+            distance_subway_window_600_mean_shift_60_future	,
+            distance_railways_window_600_mean_shift_60_future,
+            __index_level_0__
+        ),
         features_cells.* EXCEPT (epoch_time, epoch_time_id),
 
     FROM (
@@ -343,6 +414,16 @@ aggregated_with_features as (
     left join (
         select * from `shl-2021-315220.test.features_distances_to_lines_with_windows`
     ) features_routes_distances on features_routes_distances.epoch_time_id = label.epoch_time
+
+left join (
+        select * from `shl-2021-315220.test.features_cell_distances`
+
+    ) features_cell_distances on features_cell_distances.epoch_time_id = label.epoch_time
+
+    left join (
+        select * from `shl-2021-315220.test.features_cell_distances_to_lines_with_windows`
+
+    ) features_cell_routes_distances on features_cell_routes_distances.epoch_time_id = label.epoch_time
 
     left join (
         select * from `shl-2021-315220.test.features_cells`
