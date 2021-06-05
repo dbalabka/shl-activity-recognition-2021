@@ -364,10 +364,10 @@ aggregated_with_features as (
         + if(gps_agg.epoch_time_id is null, 0, 1)
         + if(cell_agg.MCC_min is null, 0, 1) > 0, 1, 0) as any_feature_available,
 
-        features_location_part_0.* EXCEPT (data_type, epoch_time, epoch_time_id),
-        features_location_part_1.* EXCEPT (data_type, epoch_time, epoch_time_id),
-        features_location_part_2.* EXCEPT (data_type, epoch_time, epoch_time_id),
-        features_location_part_3.* EXCEPT (data_type, epoch_time, epoch_time_id),
+        features_location_part_0.* EXCEPT (data_type, epoch_time_id),
+        features_location_part_1.* EXCEPT (data_type, epoch_time_id),
+        features_location_part_2.* EXCEPT (data_type, epoch_time_id),
+        features_location_part_3.* EXCEPT (data_type, epoch_time_id),
         location_agg.* EXCEPT (data_type, epoch_time_id),
         wifi_agg.* EXCEPT (data_type, epoch_time_id, wifi_SSID_any, wifi_BSSID_any, wifi_Capabilities_any),
         wifi_ssid_concat.* EXCEPT (data_type, epoch_time_id, __index_level_0__),
