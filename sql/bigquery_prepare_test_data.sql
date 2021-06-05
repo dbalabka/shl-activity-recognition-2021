@@ -301,7 +301,8 @@ aggregated_with_features as (
         wifi_ssid_concat.* EXCEPT (epoch_time_id, __index_level_0__),
         gps_agg.* EXCEPT (epoch_time_id),
         cell_agg.* EXCEPT (epoch_time_id),
-        features_distances.* EXCEPT (epoch_time_id),
+        features_distances.* EXCEPT (epoch_time_id, __index_level_0__),
+        features_routes_distances.* EXCEPT (epoch_time_id, __index_level_0__),
         features_cells.* EXCEPT (epoch_time, epoch_time_id),
 
     FROM (
@@ -338,6 +339,10 @@ aggregated_with_features as (
         select * from `shl-2021-315220.test.features_distances`
 
     ) features_distances on features_distances.epoch_time_id = label.epoch_time
+
+    left join (
+        select * from `shl-2021-315220.test.features_distances_to_lines_with_windows`
+    ) features_routes_distances on features_routes_distances.epoch_time_id = label.epoch_time
 
     left join (
         select * from `shl-2021-315220.test.features_cells`
