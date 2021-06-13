@@ -1,0 +1,2090 @@
+[
+  {
+    "insertId": "14b45tg5l66oln",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn residuals": "False",
+              "Boosting iterations": "2",
+              "Model type": "AdaNet",
+              "Last layer type": "prelogits",
+              "AdaNet lambda": 0,
+              "Complexity type": "none",
+              "Grow layer size": "284",
+              "Initial number of layers": "1"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.028086893,
+        "createTime": "2021-06-05T19:16:58Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olo",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn residuals": "False",
+              "Boosting iterations": "1",
+              "AdaNet lambda": 0,
+              "Last layer type": "prelogits",
+              "Complexity type": "none",
+              "Initial number of layers": "1",
+              "Grow layer size": "30",
+              "Model type": "AdaNet"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:53:51Z",
+        "value": 0.017785462
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olp",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "55",
+              "Initial number of layers": "0",
+              "AdaNet lambda": 0,
+              "Learn residuals": "True",
+              "Model type": "AdaNet",
+              "Last layer type": "prelogits",
+              "Boosting iterations": "2",
+              "Complexity type": "none"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:50:43Z",
+        "value": 0.017970007
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olq",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn residuals": "False",
+              "Model type": "AdaNet",
+              "Initial number of layers": "1",
+              "AdaNet lambda": 0,
+              "Last layer type": "prelogits",
+              "Complexity type": "none",
+              "Boosting iterations": "2",
+              "Grow layer size": "308"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:40:47Z",
+        "value": 0.017417226
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olr",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Boosting iterations": "4",
+              "Complexity type": "none",
+              "AdaNet lambda": 0,
+              "Model type": "AdaNet",
+              "Learn residuals": "True",
+              "Initial number of layers": "0",
+              "Last layer type": "prelogits",
+              "Grow layer size": "1024"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.018289372,
+        "createTime": "2021-06-05T18:40:01Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66ols",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:38:22Z",
+        "value": 0.01991527
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "108",
+              "Boosting iterations": "4",
+              "Last layer type": "prelogits",
+              "Complexity type": "none",
+              "Initial number of layers": "2",
+              "AdaNet lambda": 0,
+              "Learn residuals": "False",
+              "Model type": "AdaNet"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olt",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "AdaNet lambda": 0,
+              "Grow layer size": "1024",
+              "Boosting iterations": "2",
+              "Last layer type": "prelogits",
+              "Complexity type": "none",
+              "Model type": "AdaNet",
+              "Initial number of layers": "0",
+              "Learn residuals": "True"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:38:14Z",
+        "value": 0.047627836
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olu",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "AdaNet",
+              "Complexity type": "none",
+              "Initial number of layers": "0",
+              "Grow layer size": "1023",
+              "Learn residuals": "False",
+              "AdaNet lambda": 0,
+              "Last layer type": "prelogits",
+              "Boosting iterations": "3"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.026811285,
+        "createTime": "2021-06-05T18:34:52Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olv",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.017028533,
+        "createTime": "2021-06-05T18:31:11Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Complexity type": "none",
+              "AdaNet lambda": 0,
+              "Learn residuals": "True",
+              "Boosting iterations": "1",
+              "Last layer type": "prelogits",
+              "Grow layer size": "62",
+              "Model type": "AdaNet",
+              "Initial number of layers": "2"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olw",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.017080542,
+        "createTime": "2021-06-05T18:28:14Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Last layer type": "prelogits",
+              "Model type": "AdaNet",
+              "Grow layer size": "16",
+              "Initial number of layers": "0",
+              "Boosting iterations": "4",
+              "AdaNet lambda": 0,
+              "Complexity type": "none",
+              "Learn residuals": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olx",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.018083995,
+        "createTime": "2021-06-05T18:23:35Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "2",
+              "Learn residuals": "True",
+              "Last layer type": "prelogits",
+              "AdaNet lambda": 0,
+              "Grow layer size": "224",
+              "Complexity type": "none",
+              "Model type": "AdaNet",
+              "Boosting iterations": "2"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66oly",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "709",
+              "Complexity type": "none",
+              "Learn residuals": "False",
+              "Initial number of layers": "2",
+              "AdaNet lambda": 0,
+              "Boosting iterations": "4",
+              "Model type": "AdaNet",
+              "Last layer type": "prelogits"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.021902386,
+        "createTime": "2021-06-05T18:19:39Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66olz",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn residuals": "False",
+              "AdaNet lambda": 0,
+              "Learn mixture weights": "False",
+              "Complexity type": "none",
+              "Grow layer size": "420",
+              "Model type": "AdaNet",
+              "Initial number of layers": "1",
+              "Last layer type": "logits",
+              "Boosting iterations": "2"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.04495542,
+        "createTime": "2021-06-05T18:18:43Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om0",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:06:27Z",
+        "value": 0.022120781
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Complexity type": "none",
+              "Grow layer size": "50",
+              "Learn mixture weights": "False",
+              "Initial number of layers": "4",
+              "AdaNet lambda": 0,
+              "Last layer type": "logits",
+              "Learn residuals": "False",
+              "Model type": "AdaNet",
+              "Boosting iterations": "2"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om1",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.027282352,
+        "createTime": "2021-06-05T18:05:34Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "0",
+              "AdaNet lambda": 0,
+              "Boosting iterations": "4",
+              "Complexity type": "none",
+              "Learn residuals": "True",
+              "Model type": "AdaNet",
+              "Last layer type": "prelogits",
+              "Grow layer size": "16"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om2",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center bias": "False",
+              "Dropout": 0.23929417844581677,
+              "L2 shrinkage regularization strength": 0.23244338228295777,
+              "Tree complexity": "1",
+              "Model type": "AdaNet AutoEnsembler",
+              "L1 regularization strength": 5.019298109691698e-8,
+              "Max tree depth": 11,
+              "Hidden layer size": "1212",
+              "L2 regularization strength": 0.00046553718077935207,
+              "Boosting iterations": "4",
+              "Number of hidden layers": "5",
+              "Growing mode": "layer"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 1.3048154,
+        "createTime": "2021-06-05T18:04:07Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om3",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Boosting iterations": "2",
+              "Complexity type": "none",
+              "Grow layer size": "402",
+              "Last layer type": "logits",
+              "Initial number of layers": "5",
+              "Learn residuals": "True",
+              "Learn mixture weights": "True",
+              "Model type": "AdaNet",
+              "AdaNet lambda": 0
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.028988404,
+        "createTime": "2021-06-05T18:03:32Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om4",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Boosting iterations": "1",
+              "Grow layer size": "549",
+              "Initial number of layers": "0",
+              "Last layer type": "prelogits",
+              "Model type": "AdaNet",
+              "AdaNet lambda": 0,
+              "Learn residuals": "False",
+              "Complexity type": "none"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:02:51Z",
+        "value": 0.017803827
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om5",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "61",
+              "Last layer type": "logits",
+              "AdaNet lambda": 0,
+              "Learn residuals": "True",
+              "Boosting iterations": "2",
+              "Model type": "AdaNet",
+              "Initial number of layers": "0",
+              "Complexity type": "none",
+              "Learn mixture weights": "True"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T18:01:22Z",
+        "value": 0.020224325
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om6",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Hidden layer size": "827",
+              "Boosting iterations": "2",
+              "L1 regularization strength": 0.00005488073407606319,
+              "Model type": "AdaNet AutoEnsembler",
+              "Max tree depth": 8,
+              "Dropout": 0.2896063690502334,
+              "L2 shrinkage regularization strength": 0.000035750470965472664,
+              "Tree complexity": "1",
+              "Number of hidden layers": "4",
+              "L2 regularization strength": 0.0001415366124654755,
+              "Center bias": "False",
+              "Growing mode": "layer"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:58:41Z",
+        "value": 1.2857381
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om7",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:52:16Z",
+        "value": 1.2849988
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "L2 shrinkage regularization strength": 0.000001991961198873681,
+              "Boosting iterations": "2",
+              "Dropout": 0.20595020153600926,
+              "Hidden layer size": "895",
+              "Center bias": "False",
+              "L1 regularization strength": 0.0035698213761160323,
+              "L2 regularization strength": 0.0000144789032647217,
+              "Model type": "AdaNet AutoEnsembler",
+              "Max tree depth": 9,
+              "Number of hidden layers": "4",
+              "Growing mode": "tree",
+              "Tree complexity": "1"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om8",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Complexity type": "none",
+              "Model type": "AdaNet",
+              "Learn residuals": "True",
+              "Last layer type": "prelogits",
+              "Initial number of layers": "0",
+              "Grow layer size": "34",
+              "Boosting iterations": "2",
+              "AdaNet lambda": 0
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.044940542,
+        "createTime": "2021-06-05T17:46:27Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66om9",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "5",
+              "Grow layer size": "912",
+              "Learn residuals": "False",
+              "Learn mixture weights": "False",
+              "AdaNet lambda": 0,
+              "Complexity type": "none",
+              "Last layer type": "logits",
+              "Model type": "AdaNet",
+              "Boosting iterations": "1"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.034042776,
+        "createTime": "2021-06-05T17:45:20Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66oma",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.017141148,
+        "createTime": "2021-06-05T17:34:01Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "1",
+              "Boosting iterations": "4",
+              "Last layer type": "prelogits",
+              "Learn residuals": "True",
+              "Grow layer size": "240",
+              "AdaNet lambda": 0,
+              "Complexity type": "none",
+              "Model type": "AdaNet"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omb",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "35",
+              "Boosting iterations": "3",
+              "Model type": "AdaNet",
+              "Initial number of layers": "2",
+              "AdaNet lambda": 0,
+              "Learn residuals": "False",
+              "Complexity type": "none",
+              "Last layer type": "prelogits"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:32:27Z",
+        "value": 0.01776918
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omc",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.11798917,
+        "createTime": "2021-06-05T17:31:58Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn mixture weights": "False",
+              "Complexity type": "none",
+              "Initial number of layers": "5",
+              "Last layer type": "logits",
+              "Boosting iterations": "2",
+              "Model type": "AdaNet",
+              "Learn residuals": "True",
+              "Grow layer size": "70",
+              "AdaNet lambda": 0
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omd",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Grow layer size": "425",
+              "Last layer type": "logits",
+              "Complexity type": "none",
+              "Learn mixture weights": "False",
+              "Initial number of layers": "2",
+              "Learn residuals": "True",
+              "Model type": "AdaNet",
+              "AdaNet lambda": 0,
+              "Boosting iterations": "1"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:31:47Z",
+        "value": 0.021133024
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66ome",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "L2 shrinkage regularization strength": 0.005084436976386825,
+              "Max tree depth": 9,
+              "L1 regularization strength": 0.0000020073982128645177,
+              "Model type": "AdaNet AutoEnsembler",
+              "Boosting iterations": "4",
+              "Number of hidden layers": "4",
+              "Hidden layer size": "756",
+              "L2 regularization strength": 0.00000843735509445945,
+              "Growing mode": "layer",
+              "Center bias": "False",
+              "Tree complexity": "1",
+              "Dropout": 0.34435632170467423
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 1.3010764,
+        "createTime": "2021-06-05T17:29:57Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omf",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center bias": "False",
+              "Max tree depth": 9,
+              "Hidden layer size": "1749",
+              "Model type": "AdaNet AutoEnsembler",
+              "L1 regularization strength": 1.7307629798398827e-7,
+              "Boosting iterations": "2",
+              "L2 shrinkage regularization strength": 0.046513203495417925,
+              "Tree complexity": "1",
+              "Dropout": 0.0871369813970176,
+              "L2 regularization strength": 0.04736699258942394,
+              "Growing mode": "tree",
+              "Number of hidden layers": "5"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 1.3116132,
+        "createTime": "2021-06-05T17:29:10Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omg",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:23:55Z",
+        "value": 0.26552388
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn residuals": "True",
+              "Initial number of layers": "5",
+              "Learn mixture weights": "False",
+              "Complexity type": "none",
+              "Last layer type": "logits",
+              "AdaNet lambda": 0,
+              "Boosting iterations": "3",
+              "Model type": "AdaNet",
+              "Grow layer size": "845"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omh",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:21:18Z",
+        "value": 2.0175312
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree complexity": "1",
+              "Tree L1 regularization": 2.722091209761919,
+              "Center bias": "False",
+              "Tree L2 regularization": 0.8192813013622783,
+              "Number of trees": 300,
+              "Max tree depth": 3,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omi",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "4",
+              "Boosting iterations": "3",
+              "L2 regularization strength": 0.00253342276495172,
+              "Tree complexity": "1",
+              "Hidden layer size": "1430",
+              "Center bias": "False",
+              "Max tree depth": 10,
+              "L1 regularization strength": 0.002706429718321907,
+              "L2 shrinkage regularization strength": 0.000045770161948576766,
+              "Dropout": 0.1465269337327685,
+              "Growing mode": "layer",
+              "Model type": "AdaNet AutoEnsembler"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T17:11:34Z",
+        "value": 1.3623899
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omj",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 1.2817513,
+        "createTime": "2021-06-05T17:01:58Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Boosting iterations": "3",
+              "Number of hidden layers": "4",
+              "Max tree depth": 7,
+              "L1 regularization strength": 0.0022545220100740585,
+              "Growing mode": "layer",
+              "Center bias": "False",
+              "Model type": "AdaNet AutoEnsembler",
+              "Dropout": 0.32729126544917125,
+              "Hidden layer size": "782",
+              "L2 regularization strength": 0.000008952319555971904,
+              "L2 shrinkage regularization strength": 0.000002958832431565715,
+              "Tree complexity": "1"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omk",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "AdaNet AutoEnsembler",
+              "Dropout": 0.15041700633820745,
+              "Max tree depth": 11,
+              "L1 regularization strength": 0.0000023580676145218375,
+              "Tree complexity": "1",
+              "Boosting iterations": "2",
+              "Number of hidden layers": "4",
+              "Center bias": "False",
+              "Growing mode": "tree",
+              "Hidden layer size": "1447",
+              "L2 regularization strength": 0.004229022995809131,
+              "L2 shrinkage regularization strength": 0.004063917272420865
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 1.3224176,
+        "createTime": "2021-06-05T17:01:15Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66oml",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Learn mixture weights": "True",
+              "Boosting iterations": "2",
+              "Grow layer size": "145",
+              "Model type": "AdaNet",
+              "Complexity type": "none",
+              "Learn residuals": "False",
+              "AdaNet lambda": 0,
+              "Last layer type": "logits",
+              "Initial number of layers": "3"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:59:15Z",
+        "value": 0.025229791
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omm",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 2.0794585,
+        "createTime": "2021-06-05T16:59:05Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Max tree depth": 8,
+              "Tree L2 regularization": 2.737267990365613,
+              "Number of trees": 500,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 2.860818263695919,
+              "Center bias": "False",
+              "Tree complexity": "1"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omn",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Complexity type": "none",
+              "AdaNet lambda": 0,
+              "Grow layer size": "37",
+              "Boosting iterations": "4",
+              "Learn residuals": "False",
+              "Initial number of layers": "0",
+              "Last layer type": "prelogits",
+              "Model type": "AdaNet"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.019976558,
+        "createTime": "2021-06-05T16:58:52Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omo",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 2.0794585,
+        "createTime": "2021-06-05T16:58:34Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 0.8637841747133999,
+              "Model type": "GBDT",
+              "Tree complexity": "1",
+              "Max tree depth": 2,
+              "Number of trees": 300,
+              "Center bias": "False",
+              "Tree L1 regularization": 1.4556754161053125
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omp",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.021120973,
+        "createTime": "2021-06-05T16:58:29Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "2",
+              "Learn residuals": "False",
+              "AdaNet lambda": 0,
+              "Grow layer size": "163",
+              "Last layer type": "logits",
+              "Learn mixture weights": "False",
+              "Model type": "AdaNet",
+              "Complexity type": "none",
+              "Boosting iterations": "2"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omq",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "GBDT",
+              "Center bias": "False",
+              "Number of trees": 150,
+              "Tree L2 regularization": 2.6927676189317067,
+              "Tree L1 regularization": 1.7147383711827038,
+              "Tree complexity": "1",
+              "Max tree depth": 2
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 2.0156674,
+        "createTime": "2021-06-05T16:49:44Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omr",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:42:53Z",
+        "value": 0.019839404
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "AdaNet lambda": 0,
+              "Complexity type": "none",
+              "Initial number of layers": "1",
+              "Last layer type": "prelogits",
+              "Model type": "AdaNet",
+              "Learn residuals": "False",
+              "Boosting iterations": "2",
+              "Grow layer size": "196"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66oms",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:38:03Z",
+        "value": 0.02146079
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "AdaNet lambda": 0,
+              "Learn residuals": "True",
+              "Initial number of layers": "2",
+              "Model type": "AdaNet",
+              "Boosting iterations": "2",
+              "Grow layer size": "81",
+              "Complexity type": "none",
+              "Last layer type": "prelogits"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omt",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Initial number of layers": "0",
+              "Learn residuals": "True",
+              "Model type": "AdaNet",
+              "Complexity type": "none",
+              "Last layer type": "prelogits",
+              "Boosting iterations": "4",
+              "AdaNet lambda": 0,
+              "Grow layer size": "93"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.022431433,
+        "createTime": "2021-06-05T16:36:24Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omu",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:35:54Z",
+        "value": 0.03901657
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Boosting iterations": "2",
+              "AdaNet lambda": 0,
+              "Learn mixture weights": "False",
+              "Initial number of layers": "5",
+              "Complexity type": "none",
+              "Learn residuals": "True",
+              "Last layer type": "logits",
+              "Model type": "AdaNet",
+              "Grow layer size": "340"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omv",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:33:58Z",
+        "value": 1.2925314
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "4",
+              "Max tree depth": 9,
+              "L2 regularization strength": 0.00009999999969612654,
+              "Hidden layer size": "1040",
+              "Model type": "AdaNet AutoEnsembler",
+              "Growing mode": "layer",
+              "Tree complexity": "1",
+              "Boosting iterations": "3",
+              "L2 shrinkage regularization strength": 0.00009999999969612654,
+              "Center bias": "False",
+              "Dropout": 0.25,
+              "L1 regularization strength": 0.00009999999969612654
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omw",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:29:13Z",
+        "value": 2.0794585
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree complexity": "1",
+              "Number of trees": 150,
+              "Model type": "GBDT",
+              "Center bias": "False",
+              "Max tree depth": 4,
+              "Tree L1 regularization": 0.42061893112381743,
+              "Tree L2 regularization": 2.353654918780224
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omx",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:28:59Z",
+        "value": 2.0794585
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center bias": "False",
+              "Tree complexity": "1",
+              "Model type": "GBDT",
+              "Max tree depth": 7,
+              "Tree L2 regularization": 2.1579482463232735,
+              "Number of trees": 500,
+              "Tree L1 regularization": 2.626589109529402
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omy",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "GBDT",
+              "Tree L1 regularization": 1.8979557212884584,
+              "Tree L2 regularization": 1.7898247023899607,
+              "Number of trees": 300,
+              "Max tree depth": 4,
+              "Tree complexity": "1",
+              "Center bias": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:28:30Z",
+        "value": 1.8765779
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66omz",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center bias": "False",
+              "Max tree depth": 3,
+              "Model type": "GBDT",
+              "Tree complexity": "1",
+              "Number of trees": 150,
+              "Tree L1 regularization": 1.3766723738349314,
+              "Tree L2 regularization": 3.186206751859706
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 2.0794585,
+        "createTime": "2021-06-05T16:28:01Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6093306524157870080"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  },
+  {
+    "insertId": "14b45tg5l66on0",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center bias": "False",
+              "Max tree depth": 6,
+              "Tree L1 regularization": 0.259476037921324,
+              "Number of trees": 500,
+              "Model type": "GBDT",
+              "Tree L2 regularization": 2.1638519886001277,
+              "Tree complexity": "1"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T16:27:16Z",
+        "value": 2.0794585
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6093306524157870080",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T19:25:28.873133764Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+  }
+]

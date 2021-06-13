@@ -1,0 +1,457 @@
+[
+  {
+    "insertId": "gxh3z1g53so6b8",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TablesModelStructure",
+      "modelParameters": [
+        {
+          "hyperparameters": {
+            "Enable embedding L1": "False",
+            "Hidden layer size": 64,
+            "Embedding numerical embedding": "True",
+            "Enable embedding L2": "False",
+            "Enable batchNorm": "True",
+            "Number of hidden layers": "2",
+            "Enable L1": "False",
+            "Number of cross layers": "1",
+            "Enable L2": "False",
+            "Model type": "nn",
+            "Dropout rate": 0.125,
+            "Enable layerNorm": "False",
+            "Normalize numerical column": "True",
+            "Skip connections type": "concat"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable embedding L2": "False",
+            "Number of hidden layers": "2",
+            "Embedding numerical embedding": "True",
+            "Skip connections type": "concat",
+            "Enable L2": "False",
+            "Dropout rate": 0.125,
+            "Enable batchNorm": "True",
+            "Hidden layer size": 64,
+            "Enable layerNorm": "False",
+            "Number of cross layers": "1",
+            "Enable embedding L1": "False",
+            "Model type": "nn",
+            "Normalize numerical column": "True",
+            "Enable L1": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of hidden layers": "2",
+            "Number of cross layers": "2",
+            "Enable embedding L1": "False",
+            "Embedding numerical embedding": "True",
+            "Enable embedding L2": "False",
+            "Enable L1": "False",
+            "Enable batchNorm": "True",
+            "Skip connections type": "dense",
+            "Model type": "nn",
+            "Normalize numerical column": "True",
+            "Dropout rate": 0,
+            "Hidden layer size": 16,
+            "Enable layerNorm": "False",
+            "Enable L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of cross layers": "2",
+            "Enable embedding L1": "False",
+            "Embedding numerical embedding": "True",
+            "Dropout rate": 0,
+            "Enable L2": "False",
+            "Skip connections type": "dense",
+            "Enable batchNorm": "True",
+            "Model type": "nn",
+            "Number of hidden layers": "2",
+            "Normalize numerical column": "True",
+            "Enable layerNorm": "False",
+            "Hidden layer size": 16,
+            "Enable L1": "False",
+            "Enable embedding L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of cross layers": "1",
+            "Enable layerNorm": "False",
+            "Enable L1": "False",
+            "Model type": "nn",
+            "Enable embedding L1": "False",
+            "Enable embedding L2": "False",
+            "Normalize numerical column": "True",
+            "Skip connections type": "concat",
+            "Embedding numerical embedding": "True",
+            "Hidden layer size": 64,
+            "Dropout rate": 0.125,
+            "Enable L2": "False",
+            "Enable batchNorm": "True",
+            "Number of hidden layers": "2"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Normalize numerical column": "True",
+            "Enable embedding L2": "False",
+            "Enable batchNorm": "True",
+            "Number of cross layers": "1",
+            "Dropout rate": 0.125,
+            "Enable L2": "False",
+            "Skip connections type": "concat",
+            "Hidden layer size": 16,
+            "Model type": "nn",
+            "Enable embedding L1": "False",
+            "Number of hidden layers": "3",
+            "Enable layerNorm": "False",
+            "Embedding numerical embedding": "True",
+            "Enable L1": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable L2": "False",
+            "Enable layerNorm": "False",
+            "Enable L1": "False",
+            "Dropout rate": 0,
+            "Enable batchNorm": "True",
+            "Hidden layer size": 16,
+            "Model type": "nn",
+            "Enable embedding L2": "False",
+            "Embedding numerical embedding": "True",
+            "Number of cross layers": "2",
+            "Number of hidden layers": "2",
+            "Enable embedding L1": "False",
+            "Skip connections type": "dense",
+            "Normalize numerical column": "True"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Embedding numerical embedding": "True",
+            "Enable embedding L1": "False",
+            "Skip connections type": "concat",
+            "Number of hidden layers": "3",
+            "Hidden layer size": 16,
+            "Enable L2": "False",
+            "Enable L1": "False",
+            "Number of cross layers": "1",
+            "Normalize numerical column": "True",
+            "Enable layerNorm": "False",
+            "Model type": "nn",
+            "Enable embedding L2": "False",
+            "Dropout rate": 0.125,
+            "Enable batchNorm": "True"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Hidden layer size": 64,
+            "Embedding numerical embedding": "True",
+            "Number of hidden layers": "2",
+            "Number of cross layers": "1",
+            "Skip connections type": "concat",
+            "Enable embedding L1": "False",
+            "Dropout rate": 0.125,
+            "Enable layerNorm": "False",
+            "Enable batchNorm": "True",
+            "Model type": "nn",
+            "Enable embedding L2": "False",
+            "Enable L2": "False",
+            "Normalize numerical column": "True",
+            "Enable L1": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Normalize numerical column": "True",
+            "Dropout rate": 0,
+            "Skip connections type": "dense",
+            "Number of hidden layers": "2",
+            "Enable embedding L1": "False",
+            "Number of cross layers": "2",
+            "Enable batchNorm": "True",
+            "Enable embedding L2": "False",
+            "Enable layerNorm": "False",
+            "Enable L1": "False",
+            "Hidden layer size": 16,
+            "Enable L2": "False",
+            "Embedding numerical embedding": "True",
+            "Model type": "nn"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of hidden layers": "2",
+            "Number of cross layers": "1",
+            "Model type": "nn",
+            "Hidden layer size": 64,
+            "Enable embedding L1": "False",
+            "Normalize numerical column": "True",
+            "Enable layerNorm": "False",
+            "Skip connections type": "concat",
+            "Embedding numerical embedding": "True",
+            "Dropout rate": 0.125,
+            "Enable batchNorm": "True",
+            "Enable embedding L2": "False",
+            "Enable L2": "False",
+            "Enable L1": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable embedding L1": "False",
+            "Embedding numerical embedding": "True",
+            "Number of hidden layers": "4",
+            "Enable embedding L2": "False",
+            "Dropout rate": 0.375,
+            "Enable layerNorm": "False",
+            "Enable batchNorm": "True",
+            "Normalize numerical column": "True",
+            "Skip connections type": "concat",
+            "Model type": "nn",
+            "Enable L1": "False",
+            "Hidden layer size": 64,
+            "Number of cross layers": "2",
+            "Enable L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Embedding numerical embedding": "True",
+            "Enable L1": "False",
+            "Enable layerNorm": "False",
+            "Enable L2": "False",
+            "Number of cross layers": "2",
+            "Number of hidden layers": "4",
+            "Normalize numerical column": "True",
+            "Enable embedding L2": "False",
+            "Skip connections type": "concat",
+            "Enable batchNorm": "True",
+            "Model type": "nn",
+            "Dropout rate": 0.375,
+            "Hidden layer size": 64,
+            "Enable embedding L1": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of hidden layers": "3",
+            "Enable batchNorm": "True",
+            "Skip connections type": "concat",
+            "Enable L1": "False",
+            "Normalize numerical column": "True",
+            "Number of cross layers": "1",
+            "Enable embedding L1": "False",
+            "Enable embedding L2": "False",
+            "Dropout rate": 0.125,
+            "Embedding numerical embedding": "True",
+            "Hidden layer size": 16,
+            "Enable layerNorm": "False",
+            "Model type": "nn",
+            "Enable L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of cross layers": "1",
+            "Hidden layer size": 64,
+            "Skip connections type": "dense",
+            "Model type": "nn",
+            "Dropout rate": 0.25,
+            "Enable L1": "False",
+            "Enable embedding L1": "False",
+            "Enable layerNorm": "False",
+            "Normalize numerical column": "True",
+            "Embedding numerical embedding": "True",
+            "Enable embedding L2": "False",
+            "Number of hidden layers": "3",
+            "Enable batchNorm": "True",
+            "Enable L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable L2": "False",
+            "Enable L1": "False",
+            "Model type": "nn",
+            "Number of cross layers": "2",
+            "Enable batchNorm": "True",
+            "Enable embedding L2": "False",
+            "Normalize numerical column": "True",
+            "Number of hidden layers": "2",
+            "Embedding numerical embedding": "True",
+            "Enable embedding L1": "False",
+            "Skip connections type": "dense",
+            "Enable layerNorm": "False",
+            "Hidden layer size": 16,
+            "Dropout rate": 0
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable embedding L2": "False",
+            "Model type": "nn",
+            "Normalize numerical column": "True",
+            "Enable L1": "False",
+            "Hidden layer size": 64,
+            "Number of cross layers": "1",
+            "Enable embedding L1": "False",
+            "Dropout rate": 0.25,
+            "Embedding numerical embedding": "True",
+            "Enable batchNorm": "True",
+            "Number of hidden layers": "3",
+            "Enable layerNorm": "False",
+            "Enable L2": "False",
+            "Skip connections type": "dense"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable embedding L2": "False",
+            "Hidden layer size": 16,
+            "Enable embedding L1": "False",
+            "Skip connections type": "concat",
+            "Model type": "nn",
+            "Dropout rate": 0.125,
+            "Number of cross layers": "1",
+            "Enable layerNorm": "False",
+            "Enable batchNorm": "True",
+            "Enable L1": "False",
+            "Normalize numerical column": "True",
+            "Embedding numerical embedding": "True",
+            "Number of hidden layers": "3",
+            "Enable L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Dropout rate": 0.375,
+            "Hidden layer size": 64,
+            "Enable embedding L2": "False",
+            "Number of hidden layers": "4",
+            "Enable batchNorm": "True",
+            "Enable embedding L1": "False",
+            "Embedding numerical embedding": "True",
+            "Model type": "nn",
+            "Number of cross layers": "2",
+            "Enable layerNorm": "False",
+            "Enable L1": "False",
+            "Enable L2": "False",
+            "Normalize numerical column": "True",
+            "Skip connections type": "concat"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Hidden layer size": 64,
+            "Number of hidden layers": "3",
+            "Number of cross layers": "1",
+            "Normalize numerical column": "True",
+            "Enable L1": "False",
+            "Enable batchNorm": "True",
+            "Enable layerNorm": "False",
+            "Enable L2": "False",
+            "Enable embedding L1": "False",
+            "Model type": "nn",
+            "Skip connections type": "dense",
+            "Dropout rate": 0.25,
+            "Enable embedding L2": "False",
+            "Embedding numerical embedding": "True"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Number of hidden layers": "4",
+            "Enable L2": "False",
+            "Enable batchNorm": "True",
+            "Enable embedding L1": "False",
+            "Skip connections type": "concat",
+            "Embedding numerical embedding": "True",
+            "Enable L1": "False",
+            "Enable embedding L2": "False",
+            "Normalize numerical column": "True",
+            "Enable layerNorm": "False",
+            "Hidden layer size": 64,
+            "Model type": "nn",
+            "Dropout rate": 0.375,
+            "Number of cross layers": "2"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable embedding L2": "False",
+            "Number of hidden layers": "3",
+            "Skip connections type": "concat",
+            "Enable L1": "False",
+            "Enable embedding L1": "False",
+            "Dropout rate": 0.125,
+            "Hidden layer size": 16,
+            "Embedding numerical embedding": "True",
+            "Number of cross layers": "1",
+            "Enable L2": "False",
+            "Normalize numerical column": "True",
+            "Enable batchNorm": "True",
+            "Model type": "nn",
+            "Enable layerNorm": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Enable L2": "False",
+            "Number of hidden layers": "3",
+            "Skip connections type": "dense",
+            "Enable layerNorm": "False",
+            "Model type": "nn",
+            "Normalize numerical column": "True",
+            "Enable L1": "False",
+            "Dropout rate": 0.25,
+            "Embedding numerical embedding": "True",
+            "Enable embedding L1": "False",
+            "Number of cross layers": "1",
+            "Enable batchNorm": "True",
+            "Hidden layer size": 64,
+            "Enable embedding L2": "False"
+          }
+        },
+        {
+          "hyperparameters": {
+            "Normalize numerical column": "True",
+            "Model type": "nn",
+            "Number of cross layers": "1",
+            "Enable embedding L1": "False",
+            "Enable embedding L2": "False",
+            "Hidden layer size": 64,
+            "Dropout rate": 0.25,
+            "Enable layerNorm": "False",
+            "Number of hidden layers": "3",
+            "Skip connections type": "dense",
+            "Embedding numerical embedding": "True",
+            "Enable L2": "False",
+            "Enable L1": "False",
+            "Enable batchNorm": "True"
+          }
+        }
+      ]
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Fmodel",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  }
+]

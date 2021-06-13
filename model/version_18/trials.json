@@ -1,0 +1,4250 @@
+[
+  {
+    "insertId": "gxh3z1g53so68l",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Skip connections type": "concat",
+              "Number of hidden layers": "3",
+              "Enable L1": "False",
+              "Enable embedding L2": "False",
+              "Enable L2": "False",
+              "Hidden layer size": 128,
+              "Enable batchNorm": "False",
+              "Number of cross layers": "2",
+              "Dropout rate": 0.5,
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 2.8405674,
+        "createTime": "2021-06-05T01:30:05Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68m",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 1.2481033,
+        "createTime": "2021-06-05T01:28:12Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable layerNorm": "False",
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Number of hidden layers": "4",
+              "Enable L2": "False",
+              "Dropout rate": 0.25,
+              "Enable embedding L1": "False",
+              "Number of cross layers": "2",
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "True",
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Skip connections type": "dense",
+              "Hidden layer size": 64
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68n",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:23:45Z",
+        "value": 0.23117799
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "1",
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Hidden layer size": 128,
+              "Enable batchNorm": "True",
+              "Normalize numerical column": "True",
+              "Enable embedding L1": "False",
+              "Skip connections type": "dense",
+              "Enable embedding L2": "False",
+              "Enable layerNorm": "False",
+              "Number of hidden layers": "2",
+              "Enable L1": "False",
+              "Model type": "nn",
+              "Dropout rate": 0.5
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68o",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:23:17Z",
+        "value": 0.11536741
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Embedding numerical embedding": "True",
+              "Skip connections type": "concat",
+              "Number of hidden layers": "3",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Hidden layer size": 16,
+              "Number of cross layers": "1",
+              "Dropout rate": 0,
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Enable L2": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68p",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Number of cross layers": "1",
+              "Hidden layer size": 128,
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Enable embedding L2": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Number of hidden layers": "2",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.125,
+              "Enable batchNorm": "True",
+              "Skip connections type": "concat"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.8305199,
+        "createTime": "2021-06-05T01:23:07Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68q",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.59032863,
+        "createTime": "2021-06-05T01:23:05Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "0",
+              "Number of hidden layers": "4",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.25,
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 64,
+              "Enable L1": "False",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Enable batchNorm": "True",
+              "Skip connections type": "concat",
+              "Enable embedding L2": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68r",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:22:59Z",
+        "value": 0.48551282
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Enable L2": "False",
+              "Number of cross layers": "0",
+              "Skip connections type": "concat",
+              "Enable embedding L2": "False",
+              "Number of hidden layers": "4",
+              "Dropout rate": 0.5,
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 256,
+              "Enable batchNorm": "False",
+              "Enable L1": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68s",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Number of hidden layers": "3",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.25,
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Number of cross layers": "1",
+              "Enable L1": "False",
+              "Model type": "nn",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 16
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:22:26Z",
+        "value": 2.9806364
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68t",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:22:19Z",
+        "value": 0.35904288
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "False",
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True",
+              "Number of cross layers": "2",
+              "Enable layerNorm": "False",
+              "Hidden layer size": 64,
+              "Enable L2": "False",
+              "Number of hidden layers": "3",
+              "Skip connections type": "concat",
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0,
+              "Enable embedding L2": "False",
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68u",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:22:05Z",
+        "value": 0.5001672
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Model type": "nn",
+              "Hidden layer size": 64,
+              "Number of cross layers": "1",
+              "Enable L1": "False",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Dropout rate": 0.625,
+              "Number of hidden layers": "3",
+              "Skip connections type": "concat",
+              "Embedding numerical embedding": "True"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68v",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Hidden layer size": 16,
+              "Enable L1": "False",
+              "Dropout rate": 0.125,
+              "Enable embedding L1": "False",
+              "Number of cross layers": "4",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Enable embedding L2": "False",
+              "Number of hidden layers": "3",
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "True",
+              "Model type": "nn",
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.2670685,
+        "createTime": "2021-06-05T01:22:01Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68w",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 64,
+              "Number of cross layers": "1",
+              "Model type": "nn",
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Number of hidden layers": "1",
+              "Enable L1": "False",
+              "Dropout rate": 0,
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:21:52Z",
+        "value": 3.0572796
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68x",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable layerNorm": "False",
+              "Number of cross layers": "3",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Dropout rate": 0,
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True",
+              "Skip connections type": "concat",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Number of hidden layers": "2",
+              "Hidden layer size": 64,
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.42384747,
+        "createTime": "2021-06-05T01:21:01Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68y",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "nn",
+              "Enable L2": "False",
+              "Number of cross layers": "4",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "True",
+              "Enable embedding L2": "False",
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0.125,
+              "Number of hidden layers": "3",
+              "Hidden layer size": 64,
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:20:56Z",
+        "value": 0.28289494
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so68z",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.038038068,
+        "createTime": "2021-06-05T01:20:37Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Normalize numerical column": "True",
+              "Number of cross layers": "1",
+              "Enable embedding L2": "False",
+              "Hidden layer size": 16,
+              "Skip connections type": "concat",
+              "Enable batchNorm": "False",
+              "Enable embedding L1": "False",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.25,
+              "Number of hidden layers": "3",
+              "Model type": "nn",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so690",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:20:37Z",
+        "value": 0.14598194
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Number of cross layers": "1",
+              "Model type": "nn",
+              "Number of hidden layers": "2",
+              "Enable L2": "False",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 64,
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True",
+              "Enable embedding L2": "False",
+              "Dropout rate": 0.125,
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so691",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:20:12Z",
+        "value": 4.1118217
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Embedding numerical embedding": "True",
+              "Number of hidden layers": "4",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0,
+              "Model type": "nn",
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Number of cross layers": "2",
+              "Hidden layer size": 64,
+              "Enable batchNorm": "True",
+              "Enable embedding L1": "False",
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Enable layerNorm": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so692",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Skip connections type": "concat",
+              "Hidden layer size": 64,
+              "Enable embedding L1": "False",
+              "Enable batchNorm": "True",
+              "Embedding numerical embedding": "True",
+              "Model type": "nn",
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Number of cross layers": "2",
+              "Dropout rate": 0.25,
+              "Enable layerNorm": "False",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Number of hidden layers": "2"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.5708457,
+        "createTime": "2021-06-05T01:20:08Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so693",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:20:06Z",
+        "value": 0.18878241
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Hidden layer size": 16,
+              "Enable embedding L1": "False",
+              "Enable batchNorm": "True",
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Model type": "nn",
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Number of cross layers": "3",
+              "Enable L2": "False",
+              "Dropout rate": 0.25,
+              "Skip connections type": "dense",
+              "Number of hidden layers": "3"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so694",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:51Z",
+        "value": 0.38433263
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Dropout rate": 0.25,
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "True",
+              "Number of hidden layers": "2",
+              "Number of cross layers": "3",
+              "Model type": "nn",
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Skip connections type": "concat",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 128
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so695",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "3",
+              "Skip connections type": "dense",
+              "Embedding numerical embedding": "True",
+              "Model type": "nn",
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Number of cross layers": "2",
+              "Normalize numerical column": "True",
+              "Enable L1": "False",
+              "Dropout rate": 0.125,
+              "Enable L2": "False",
+              "Enable embedding L2": "False",
+              "Hidden layer size": 128,
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.2419765,
+        "createTime": "2021-06-05T01:19:49Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so696",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:41Z",
+        "value": 0.3911139
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Number of cross layers": "4",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Model type": "nn",
+              "Dropout rate": 0.125,
+              "Enable L1": "False",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 64,
+              "Enable batchNorm": "True",
+              "Number of hidden layers": "2",
+              "Enable embedding L2": "False",
+              "Enable layerNorm": "False",
+              "Skip connections type": "concat"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so697",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:40Z",
+        "value": 0.35701564
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Skip connections type": "dense",
+              "Hidden layer size": 64,
+              "Enable embedding L1": "False",
+              "Number of cross layers": "3",
+              "Model type": "nn",
+              "Enable batchNorm": "True",
+              "Embedding numerical embedding": "True",
+              "Number of hidden layers": "3",
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0.25,
+              "Enable L2": "False",
+              "Enable embedding L2": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so698",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.21771513,
+        "createTime": "2021-06-05T01:19:35Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0,
+              "Enable L1": "False",
+              "Enable embedding L1": "False",
+              "Enable embedding L2": "False",
+              "Hidden layer size": 16,
+              "Model type": "nn",
+              "Number of hidden layers": "3",
+              "Enable layerNorm": "False",
+              "Skip connections type": "concat",
+              "Number of cross layers": "2",
+              "Embedding numerical embedding": "True"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so699",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.9625134,
+        "createTime": "2021-06-05T01:19:35Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable layerNorm": "False",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Enable embedding L1": "False",
+              "Embedding numerical embedding": "True",
+              "Hidden layer size": 16,
+              "Normalize numerical column": "True",
+              "Number of cross layers": "3",
+              "Dropout rate": 0.125,
+              "Number of hidden layers": "1",
+              "Skip connections type": "dense",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69a",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.14015113,
+        "createTime": "2021-06-05T01:19:33Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Enable embedding L1": "False",
+              "Enable embedding L2": "False",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Number of cross layers": "1",
+              "Number of hidden layers": "2",
+              "Dropout rate": 0.125,
+              "Skip connections type": "dense",
+              "Embedding numerical embedding": "True",
+              "Hidden layer size": 16,
+              "Model type": "nn"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69b",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "nn",
+              "Number of cross layers": "3",
+              "Enable L1": "False",
+              "Dropout rate": 0,
+              "Hidden layer size": 16,
+              "Skip connections type": "dense",
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Number of hidden layers": "3",
+              "Enable embedding L2": "False",
+              "Embedding numerical embedding": "True"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:33Z",
+        "value": 13.141339
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69c",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Embedding numerical embedding": "True",
+              "Dropout rate": 0.125,
+              "Enable embedding L2": "False",
+              "Hidden layer size": 64,
+              "Enable batchNorm": "True",
+              "Number of hidden layers": "1",
+              "Enable L1": "False",
+              "Enable embedding L1": "False",
+              "Enable layerNorm": "False",
+              "Number of cross layers": "1",
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:28Z",
+        "value": 2.8158433
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69d",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.25607166,
+        "createTime": "2021-06-05T01:19:22Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Number of cross layers": "2",
+              "Enable L1": "False",
+              "Hidden layer size": 64,
+              "Enable layerNorm": "False",
+              "Normalize numerical column": "True",
+              "Enable batchNorm": "True",
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Number of hidden layers": "3",
+              "Skip connections type": "dense",
+              "Enable embedding L2": "False",
+              "Model type": "nn",
+              "Dropout rate": 0.125
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69e",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree complexity": 1,
+              "Tree L2 regularization": 3,
+              "Max tree depth": 12,
+              "Number of trees": 400,
+              "Center Bias": "False",
+              "Model type": "GBDT",
+              "Tree L1 regularization": 3
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.38785788,
+        "createTime": "2021-06-05T01:19:15Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69f",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:12Z",
+        "value": 0.19588421
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Model type": "nn",
+              "Enable L1": "False",
+              "Dropout rate": 0.125,
+              "Skip connections type": "concat",
+              "Enable embedding L2": "False",
+              "Number of cross layers": "1",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 64,
+              "Enable batchNorm": "True",
+              "Number of hidden layers": "1"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69g",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Embedding numerical embedding": "True",
+              "Number of cross layers": "3",
+              "Number of hidden layers": "3",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Dropout rate": 0,
+              "Normalize numerical column": "True",
+              "Hidden layer size": 16,
+              "Skip connections type": "dense",
+              "Enable L1": "False",
+              "Enable L2": "False",
+              "Enable embedding L2": "False",
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:10Z",
+        "value": 21.79979
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69h",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Hidden layer size": 16,
+              "Enable batchNorm": "True",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0.125,
+              "Skip connections type": "dense",
+              "Number of hidden layers": "4",
+              "Enable L1": "False",
+              "Model type": "nn",
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Number of cross layers": "3",
+              "Enable embedding L2": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:10Z",
+        "value": 0.48051938
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69i",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.120602466,
+        "createTime": "2021-06-05T01:19:09Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Number of hidden layers": "1",
+              "Model type": "nn",
+              "Hidden layer size": 64,
+              "Number of cross layers": "1",
+              "Enable embedding L1": "False",
+              "Skip connections type": "concat",
+              "Enable layerNorm": "False",
+              "Enable batchNorm": "True",
+              "Dropout rate": 0.125
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69j",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:19:01Z",
+        "value": 0.4416773
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 0.10000000149011612,
+              "Center Bias": "False",
+              "Max tree depth": 12,
+              "Model type": "GBDT",
+              "Tree complexity": 1,
+              "Number of trees": 450,
+              "Tree L2 regularization": 1
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69k",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.25501502,
+        "createTime": "2021-06-05T01:19:00Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Hidden layer size": 64,
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Enable embedding L1": "False",
+              "Embedding numerical embedding": "True",
+              "Enable layerNorm": "False",
+              "Skip connections type": "dense",
+              "Number of cross layers": "3",
+              "Enable L2": "False",
+              "Number of hidden layers": "3",
+              "Enable L1": "False",
+              "Enable embedding L2": "False",
+              "Dropout rate": 0
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69l",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Max tree depth": 9,
+              "Model type": "GBDT",
+              "Tree complexity": 3,
+              "Tree L1 regularization": 0.30000001192092896,
+              "Tree L2 regularization": 0.10000000149011612,
+              "Number of trees": 500
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:18:59Z",
+        "value": 0.4428103
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69m",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.5167681,
+        "createTime": "2021-06-05T01:18:53Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "GBDT",
+              "Max tree depth": 9,
+              "Tree complexity": 0,
+              "Number of trees": 150,
+              "Tree L2 regularization": 0.10000000149011612,
+              "Tree L1 regularization": 0.30000001192092896,
+              "Center Bias": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69n",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 0,
+              "Max tree depth": 9,
+              "Tree complexity": 0,
+              "Center Bias": "False",
+              "Tree L1 regularization": 0.30000001192092896,
+              "Number of trees": 150,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.5374513,
+        "createTime": "2021-06-05T01:18:52Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69o",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Embedding numerical embedding": "True",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0,
+              "Enable embedding L2": "False",
+              "Hidden layer size": 16,
+              "Number of hidden layers": "2",
+              "Skip connections type": "dense",
+              "Model type": "nn",
+              "Number of cross layers": "3",
+              "Enable batchNorm": "True",
+              "Enable L1": "False",
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.22158314,
+        "createTime": "2021-06-05T01:18:51Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69p",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "nn",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Hidden layer size": 16,
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Enable L1": "False",
+              "Enable embedding L1": "False",
+              "Number of hidden layers": "3",
+              "Dropout rate": 0,
+              "Enable batchNorm": "True",
+              "Number of cross layers": "3"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 19.941885,
+        "createTime": "2021-06-05T01:18:45Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69q",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable layerNorm": "False",
+              "Enable batchNorm": "True",
+              "Enable L1": "False",
+              "Dropout rate": 0,
+              "Number of hidden layers": "2",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 64,
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Number of cross layers": "1",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:18:32Z",
+        "value": 0.10548625
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69r",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Number of trees": 450,
+              "Max tree depth": 9,
+              "Tree L2 regularization": 0,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 3,
+              "Tree complexity": 0
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.32282165,
+        "createTime": "2021-06-05T01:18:06Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69s",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:17:59Z",
+        "value": 0.3169322
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 3,
+              "Number of trees": 300,
+              "Tree L2 regularization": 3,
+              "Tree complexity": 1,
+              "Center Bias": "False",
+              "Model type": "GBDT",
+              "Max tree depth": 12
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69t",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Number of trees": 150,
+              "Max tree depth": 15,
+              "Tree L2 regularization": 0.30000001192092896,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 3,
+              "Tree complexity": 0
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 1.5720385,
+        "createTime": "2021-06-05T01:17:50Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69u",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "5",
+              "Model type": "nn",
+              "Enable batchNorm": "True",
+              "Enable L2": "False",
+              "Hidden layer size": 128,
+              "Skip connections type": "concat",
+              "Enable embedding L1": "False",
+              "Dropout rate": 0.5,
+              "Enable L1": "False",
+              "Enable embedding L2": "False",
+              "Number of cross layers": "1",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:17:14Z",
+        "value": 0.7955335
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69v",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable layerNorm": "False",
+              "Skip connections type": "dense",
+              "Hidden layer size": 128,
+              "Enable L1": "False",
+              "Enable L2": "False",
+              "Model type": "nn",
+              "Dropout rate": 0.375,
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Normalize numerical column": "True",
+              "Number of cross layers": "2",
+              "Enable batchNorm": "True",
+              "Enable embedding L2": "False",
+              "Number of hidden layers": "4"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.5398082,
+        "createTime": "2021-06-05T01:10:57Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69w",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Skip connections type": "dense",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Dropout rate": 0.25,
+              "Embedding numerical embedding": "True",
+              "Number of cross layers": "1",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Enable embedding L1": "False",
+              "Number of hidden layers": "2",
+              "Hidden layer size": 64,
+              "Enable layerNorm": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.3793533,
+        "createTime": "2021-06-05T01:10:43Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69x",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 1.9278717,
+        "createTime": "2021-06-05T01:09:20Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 1,
+              "Tree L1 regularization": 0.30000001192092896,
+              "Number of trees": 250,
+              "Max tree depth": 6,
+              "Tree complexity": 1,
+              "Center Bias": "False",
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69y",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Dropout rate": 0,
+              "Enable L2": "False",
+              "Enable embedding L2": "False",
+              "Skip connections type": "concat",
+              "Enable embedding L1": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "False",
+              "Enable L1": "False",
+              "Number of cross layers": "4",
+              "Enable layerNorm": "False",
+              "Hidden layer size": 16,
+              "Number of hidden layers": "4"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 4.081907,
+        "createTime": "2021-06-05T01:09:16Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so69z",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:09:16Z",
+        "value": 0.782136
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "1",
+              "Enable layerNorm": "False",
+              "Enable L2": "False",
+              "Dropout rate": 0.375,
+              "Normalize numerical column": "True",
+              "Skip connections type": "concat",
+              "Enable batchNorm": "False",
+              "Number of hidden layers": "5",
+              "Model type": "nn",
+              "Hidden layer size": 256,
+              "Enable L1": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Enable embedding L2": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a0",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Number of hidden layers": "4",
+              "Hidden layer size": 128,
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Enable batchNorm": "False",
+              "Dropout rate": 0.5,
+              "Model type": "nn",
+              "Number of cross layers": "1",
+              "Skip connections type": "dense",
+              "Enable layerNorm": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.4335573,
+        "createTime": "2021-06-05T01:09:04Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a1",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 53.14861,
+        "createTime": "2021-06-05T01:08:34Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Hidden layer size": 16,
+              "Enable batchNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Number of hidden layers": "4",
+              "Skip connections type": "dense",
+              "Model type": "nn",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Dropout rate": 0.125,
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Number of cross layers": "3"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a2",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "False",
+              "Number of hidden layers": "5",
+              "Model type": "nn",
+              "Embedding numerical embedding": "True",
+              "Enable layerNorm": "False",
+              "Skip connections type": "dense",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 256,
+              "Dropout rate": 0.625,
+              "Number of cross layers": "0",
+              "Enable L1": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:08:32Z",
+        "value": 0.7670748
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a3",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L1": "False",
+              "Enable L2": "False",
+              "Number of hidden layers": "3",
+              "Dropout rate": 0.5,
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Skip connections type": "dense",
+              "Enable batchNorm": "False",
+              "Hidden layer size": 128,
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Number of cross layers": "3",
+              "Enable layerNorm": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:08:10Z",
+        "value": 1.049199
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a4",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "2",
+              "Enable batchNorm": "True",
+              "Enable embedding L1": "False",
+              "Skip connections type": "concat",
+              "Number of hidden layers": "4",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Enable L2": "False",
+              "Dropout rate": 0.375,
+              "Enable L1": "False",
+              "Hidden layer size": 64,
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.4215006,
+        "createTime": "2021-06-05T01:08:08Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a5",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L2": "False",
+              "Hidden layer size": 64,
+              "Dropout rate": 0.25,
+              "Enable layerNorm": "False",
+              "Number of hidden layers": "3",
+              "Enable batchNorm": "True",
+              "Embedding numerical embedding": "True",
+              "Number of cross layers": "1",
+              "Enable L2": "False",
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:08:07Z",
+        "value": 0.121673174
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a6",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:07:50Z",
+        "value": 0.69087857
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Enable L2": "False",
+              "Dropout rate": 0,
+              "Enable L1": "False",
+              "Number of cross layers": "3",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Hidden layer size": 16,
+              "Skip connections type": "concat",
+              "Model type": "nn",
+              "Number of hidden layers": "3",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a7",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Dropout rate": 0.375,
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Number of cross layers": "2",
+              "Embedding numerical embedding": "True",
+              "Model type": "nn",
+              "Enable layerNorm": "False",
+              "Number of hidden layers": "4",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "True",
+              "Hidden layer size": 64
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:07:44Z",
+        "value": 0.6825188
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a8",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "False",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Skip connections type": "concat",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L1": "False",
+              "Number of hidden layers": "3",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.5,
+              "Enable embedding L2": "False",
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Hidden layer size": 64,
+              "Number of cross layers": "1"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.47040483,
+        "createTime": "2021-06-05T01:07:36Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6a9",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L2": "False",
+              "Skip connections type": "concat",
+              "Enable L2": "False",
+              "Enable batchNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Dropout rate": 0.375,
+              "Normalize numerical column": "True",
+              "Enable L1": "False",
+              "Hidden layer size": 64,
+              "Enable embedding L1": "False",
+              "Number of cross layers": "2",
+              "Enable layerNorm": "False",
+              "Model type": "nn",
+              "Number of hidden layers": "5"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 3.4540493,
+        "createTime": "2021-06-05T01:07:29Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6aa",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Hidden layer size": 64,
+              "Enable L1": "False",
+              "Number of cross layers": "1",
+              "Enable L2": "False",
+              "Skip connections type": "concat",
+              "Normalize numerical column": "True",
+              "Number of hidden layers": "2",
+              "Enable embedding L1": "False",
+              "Enable embedding L2": "False",
+              "Enable layerNorm": "False",
+              "Dropout rate": 0.125,
+              "Enable batchNorm": "True",
+              "Embedding numerical embedding": "True",
+              "Model type": "nn"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:07:16Z",
+        "value": 0.20168377
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ab",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 3,
+              "Tree L2 regularization": 1,
+              "Number of trees": 250,
+              "Model type": "GBDT",
+              "Center Bias": "False",
+              "Tree complexity": 0.30000001192092896,
+              "Max tree depth": 12
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 1.9275285,
+        "createTime": "2021-06-05T01:07:05Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ac",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 0.09989837,
+        "createTime": "2021-06-05T01:07:03Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable batchNorm": "True",
+              "Enable L2": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Number of cross layers": "1",
+              "Dropout rate": 0.125,
+              "Enable embedding L2": "False",
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Hidden layer size": 16,
+              "Skip connections type": "concat",
+              "Number of hidden layers": "3",
+              "Enable embedding L1": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ad",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Enable layerNorm": "False",
+              "Enable L1": "False",
+              "Enable batchNorm": "False",
+              "Hidden layer size": 16,
+              "Number of cross layers": "2",
+              "Model type": "nn",
+              "Enable L2": "False",
+              "Number of hidden layers": "2",
+              "Enable embedding L2": "False",
+              "Dropout rate": 0.375,
+              "Skip connections type": "concat",
+              "Embedding numerical embedding": "True",
+              "Normalize numerical column": "True"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:07:02Z",
+        "value": 0.43748868
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ae",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 2.1944747,
+        "createTime": "2021-06-05T01:06:53Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "3",
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Enable embedding L2": "False",
+              "Embedding numerical embedding": "True",
+              "Number of hidden layers": "3",
+              "Enable layerNorm": "False",
+              "Skip connections type": "concat",
+              "Enable batchNorm": "True",
+              "Enable embedding L1": "False",
+              "Model type": "nn",
+              "Hidden layer size": 16,
+              "Dropout rate": 0,
+              "Enable L1": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6af",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:51Z",
+        "value": 1.927723
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 1,
+              "Tree L2 regularization": 0.30000001192092896,
+              "Model type": "GBDT",
+              "Center Bias": "False",
+              "Tree complexity": 1,
+              "Number of trees": 350,
+              "Max tree depth": 12
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ag",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Normalize numerical column": "True",
+              "Hidden layer size": 128,
+              "Dropout rate": 0.125,
+              "Enable L2": "False",
+              "Enable layerNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Enable embedding L1": "False",
+              "Enable L1": "False",
+              "Number of hidden layers": "3",
+              "Enable batchNorm": "True",
+              "Model type": "nn",
+              "Number of cross layers": "3",
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 0.27437386,
+        "createTime": "2021-06-05T01:06:38Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ah",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "2",
+              "Model type": "nn",
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Enable embedding L2": "False",
+              "Number of cross layers": "3",
+              "Normalize numerical column": "True",
+              "Enable batchNorm": "False",
+              "Skip connections type": "dense",
+              "Enable embedding L1": "False",
+              "Hidden layer size": 16,
+              "Embedding numerical embedding": "True",
+              "Enable L2": "False",
+              "Dropout rate": 0.125
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 2.8156185,
+        "createTime": "2021-06-05T01:06:37Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ai",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 2.0219057,
+        "createTime": "2021-06-05T01:06:37Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "GBDT",
+              "Tree complexity": 0.30000001192092896,
+              "Number of trees": 250,
+              "Tree L2 regularization": 0.30000001192092896,
+              "Tree L1 regularization": 0.30000001192092896,
+              "Max tree depth": 6,
+              "Center Bias": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6aj",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Max tree depth": 12,
+              "Tree L2 regularization": 3,
+              "Tree L1 regularization": 0.30000001192092896,
+              "Center Bias": "False",
+              "Number of trees": 250,
+              "Model type": "GBDT",
+              "Tree complexity": 3
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:35Z",
+        "value": 1.0349349
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ak",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:35Z",
+        "value": 3.389291
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable L2": "False",
+              "Embedding numerical embedding": "True",
+              "Enable L1": "False",
+              "Model type": "nn",
+              "Number of cross layers": "2",
+              "Number of hidden layers": "1",
+              "Skip connections type": "concat",
+              "Hidden layer size": 1024,
+              "Enable embedding L2": "False",
+              "Enable batchNorm": "False",
+              "Normalize numerical column": "True",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Dropout rate": 0.25
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6al",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Tree L1 regularization": 0.10000000149011612,
+              "Model type": "GBDT",
+              "Tree complexity": 1,
+              "Max tree depth": 12,
+              "Number of trees": 300,
+              "Tree L2 regularization": 0.30000001192092896
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:34Z",
+        "value": 1.9275846
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6am",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 19.429499,
+        "createTime": "2021-06-05T01:06:34Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of cross layers": "3",
+              "Skip connections type": "dense",
+              "Normalize numerical column": "True",
+              "Enable batchNorm": "False",
+              "Embedding numerical embedding": "True",
+              "Enable L1": "False",
+              "Enable layerNorm": "False",
+              "Enable embedding L2": "False",
+              "Enable L2": "False",
+              "Number of hidden layers": "2",
+              "Model type": "nn",
+              "Dropout rate": 0.125,
+              "Enable embedding L1": "False",
+              "Hidden layer size": 64
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6an",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 3,
+              "Tree L1 regularization": 3,
+              "Number of trees": 50,
+              "Tree complexity": 0.10000000149011612,
+              "Max tree depth": 12,
+              "Center Bias": "False",
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 1.328737,
+        "createTime": "2021-06-05T01:06:33Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ao",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:32Z",
+        "value": 0.3430008
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Enable L1": "False",
+              "Dropout rate": 0.125,
+              "Number of hidden layers": "4",
+              "Enable layerNorm": "False",
+              "Number of cross layers": "4",
+              "Enable embedding L1": "False",
+              "Model type": "nn",
+              "Enable L2": "False",
+              "Hidden layer size": 16,
+              "Skip connections type": "concat",
+              "Embedding numerical embedding": "True",
+              "Enable batchNorm": "True"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ap",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Tree complexity": 1,
+              "Number of trees": 300,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 3,
+              "Max tree depth": 9,
+              "Tree L2 regularization": 0.30000001192092896
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:31Z",
+        "value": 2.0794535
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6aq",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:30Z",
+        "value": 1.4970909
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 0.30000001192092896,
+              "Tree complexity": 0.30000001192092896,
+              "Center Bias": "False",
+              "Model type": "GBDT",
+              "Number of trees": 300,
+              "Max tree depth": 9,
+              "Tree L1 regularization": 0.30000001192092896
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ar",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:30Z",
+        "value": 2.0794535
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 3,
+              "Tree complexity": 3,
+              "Max tree depth": 6,
+              "Center Bias": "False",
+              "Number of trees": 150,
+              "Tree L2 regularization": 3,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6as",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:28Z",
+        "value": 1.9276214
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of trees": 250,
+              "Center Bias": "False",
+              "Max tree depth": 6,
+              "Model type": "GBDT",
+              "Tree complexity": 3,
+              "Tree L2 regularization": 1,
+              "Tree L1 regularization": 0.30000001192092896
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6at",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of trees": 350,
+              "Tree L1 regularization": 3,
+              "Model type": "GBDT",
+              "Center Bias": "False",
+              "Tree complexity": 0.30000001192092896,
+              "Max tree depth": 6,
+              "Tree L2 regularization": 3
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "value": 2.0794535,
+        "createTime": "2021-06-05T01:06:27Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6au",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:25Z",
+        "value": 0.52884156
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Enable embedding L1": "False",
+              "Normalize numerical column": "True",
+              "Model type": "nn",
+              "Number of cross layers": "3",
+              "Enable L2": "False",
+              "Enable L1": "False",
+              "Number of hidden layers": "3",
+              "Hidden layer size": 64,
+              "Enable batchNorm": "False",
+              "Dropout rate": 0.125,
+              "Enable embedding L2": "False",
+              "Embedding numerical embedding": "True",
+              "Enable layerNorm": "False",
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6av",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Center Bias": "False",
+              "Number of trees": 250,
+              "Max tree depth": 12,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 1,
+              "Tree L2 regularization": 1,
+              "Tree complexity": 1
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 1.3278002,
+        "createTime": "2021-06-05T01:06:24Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6aw",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:22Z",
+        "value": 1.9939427
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 3,
+              "Center Bias": "False",
+              "Max tree depth": 12,
+              "Number of trees": 300,
+              "Model type": "GBDT",
+              "Tree complexity": 3,
+              "Tree L2 regularization": 1
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ax",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "value": 5.572824,
+        "createTime": "2021-06-05T01:06:22Z"
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "3",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Enable layerNorm": "False",
+              "Enable embedding L1": "False",
+              "Enable L2": "False",
+              "Enable batchNorm": "False",
+              "Model type": "nn",
+              "Normalize numerical column": "True",
+              "Skip connections type": "concat",
+              "Hidden layer size": 128,
+              "Number of cross layers": "2",
+              "Dropout rate": 0,
+              "Enable L1": "False"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6ay",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of trees": 300,
+              "Center Bias": "False",
+              "Max tree depth": 9,
+              "Tree L1 regularization": 1,
+              "Model type": "GBDT",
+              "Tree L2 regularization": 1,
+              "Tree complexity": 1
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:17Z",
+        "value": 1.9273871
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6az",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 1,
+              "Number of trees": 250,
+              "Max tree depth": 6,
+              "Center Bias": "False",
+              "Tree complexity": 0.30000001192092896,
+              "Tree L2 regularization": 1,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:15Z",
+        "value": 1.9278994
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b0",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 0.30000001192092896,
+              "Model type": "GBDT",
+              "Tree L2 regularization": 0.30000001192092896,
+              "Max tree depth": 9,
+              "Number of trees": 150,
+              "Center Bias": "False",
+              "Tree complexity": 1
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:13Z",
+        "value": 0.9129111
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b1",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree complexity": 3,
+              "Model type": "GBDT",
+              "Tree L1 regularization": 1,
+              "Max tree depth": 9,
+              "Tree L2 regularization": 3,
+              "Number of trees": 400,
+              "Center Bias": "False"
+            }
+          }
+        ]
+      },
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:11Z",
+        "value": 0.662847
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial"
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b2",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.78191924,
+        "createTime": "2021-06-05T01:06:11Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L1 regularization": 0.30000001192092896,
+              "Tree L2 regularization": 0.10000000149011612,
+              "Max tree depth": 9,
+              "Tree complexity": 0.30000001192092896,
+              "Center Bias": "False",
+              "Number of trees": 250,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b3",
+    "jsonPayload": {
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:06:08Z",
+        "value": 1.0313405
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree L2 regularization": 1,
+              "Tree complexity": 1,
+              "Number of trees": 300,
+              "Tree L1 regularization": 1,
+              "Max tree depth": 12,
+              "Center Bias": "False",
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "project_id": "shl-2021-315220",
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b4",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Tree complexity": 1,
+              "Tree L1 regularization": 1,
+              "Model type": "GBDT",
+              "Tree L2 regularization": 0.30000001192092896,
+              "Max tree depth": 12,
+              "Number of trees": 250,
+              "Center Bias": "False"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 0.91657925,
+        "createTime": "2021-06-05T01:06:06Z"
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b5",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:05:56Z",
+        "value": 0.24857743
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of hidden layers": "2",
+              "Model type": "nn",
+              "Embedding numerical embedding": "True",
+              "Enable embedding L2": "False",
+              "Normalize numerical column": "True",
+              "Enable L2": "False",
+              "Enable embedding L1": "False",
+              "Enable batchNorm": "True",
+              "Dropout rate": 0,
+              "Enable layerNorm": "False",
+              "Number of cross layers": "2",
+              "Hidden layer size": 16,
+              "Enable L1": "False",
+              "Skip connections type": "dense"
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "job_id": "TBL6964295655216906240",
+        "region": "us-central1",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b6",
+    "jsonPayload": {
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "value": 1.1765893,
+        "createTime": "2021-06-05T01:05:52Z"
+      },
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Model type": "GBDT",
+              "Number of trees": 250,
+              "Tree L2 regularization": 1,
+              "Center Bias": "False",
+              "Max tree depth": 12,
+              "Tree L1 regularization": 3,
+              "Tree complexity": 0.30000001192092896
+            }
+          }
+        ]
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  },
+  {
+    "insertId": "gxh3z1g53so6b7",
+    "jsonPayload": {
+      "modelStructure": {
+        "modelParameters": [
+          {
+            "hyperparameters": {
+              "Number of trees": 150,
+              "Tree L2 regularization": 0.30000001192092896,
+              "Tree complexity": 0.30000001192092896,
+              "Center Bias": "False",
+              "Tree L1 regularization": 3,
+              "Max tree depth": 6,
+              "Model type": "GBDT"
+            }
+          }
+        ]
+      },
+      "@type": "type.googleapis.com/google.cloud.automl.master.TuningTrial",
+      "trainingObjectivePoint": {
+        "createTime": "2021-06-05T01:05:52Z",
+        "value": 1.9077333
+      }
+    },
+    "resource": {
+      "type": "cloudml_job",
+      "labels": {
+        "region": "us-central1",
+        "job_id": "TBL6964295655216906240",
+        "project_id": "shl-2021-315220"
+      }
+    },
+    "timestamp": "2021-06-05T02:45:01.372588727Z",
+    "severity": "INFO",
+    "labels": {
+      "log_type": "automl_tables"
+    },
+    "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Ftuning",
+    "receiveTimestamp": "2021-06-05T02:45:01.372588727Z"
+  }
+]

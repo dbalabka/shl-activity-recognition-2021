@@ -1,0 +1,35 @@
+{
+  "insertId": "14b45tg5l66on1",
+  "jsonPayload": {
+    "@type": "type.googleapis.com/google.cloud.automl.master.TablesModelStructure",
+    "modelParameters": [
+      {
+        "hyperparameters": {
+          "Learn residuals": "True",
+          "Complexity type": "none",
+          "Last layer type": "prelogits",
+          "Grow layer size": "240",
+          "Model type": "AdaNet",
+          "Initial number of layers": "1",
+          "AdaNet lambda": 0,
+          "Boosting iterations": "4"
+        }
+      }
+    ]
+  },
+  "resource": {
+    "type": "cloudml_job",
+    "labels": {
+      "region": "us-central1",
+      "project_id": "shl-2021-315220",
+      "job_id": "TBL6093306524157870080"
+    }
+  },
+  "timestamp": "2021-06-05T19:25:28.873133764Z",
+  "severity": "INFO",
+  "labels": {
+    "log_type": "automl_tables"
+  },
+  "logName": "projects/shl-2021-315220/logs/automl.googleapis.com%2Fmodel",
+  "receiveTimestamp": "2021-06-05T19:25:28.873133764Z"
+}
